@@ -1,0 +1,85 @@
+---
+title: "Comunicando seus resultados: Criando apresentações com **Quarto**"
+author: "Beatriz Milz"
+date: "Latin-R 2022 | Outubro 2022   <br><br> Slides: **beatrizmilz.github.io/2022-latinr-quarto-tutorial** "
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    self-contained: false
+    incremental: false
+    footer: "Slides by [Beatriz Milz](https://beamilz.com) (@BeaMilz), made with [Quarto](https://quarto.org/docs/presentations/revealjs/index.html)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    preview-links: false
+---
+
+## Beatriz Milz 🇧🇷 {.center .aboutmeslide}
+
+::: columns
+::: {.column width="60%"}
+-   Contato
+
+    -   Twitter: [\@BeaMilz](https://twitter.com/BeaMilz)
+
+    -   Blog: [beamilz.com](https://beamilz.com)
+
+-   Sobre mim
+
+    -   Co-organizadora: R-Ladies São Paulo / Latin-R / satRday São Paulo
+
+    -   Professora na [Curso-R](https://curso-r.com/)
+
+    -   Instrutora de Tidyverse certificada pela RStudio
+:::
+
+::: {.column width="40%"}
+![](img/octocat-1656339210373.png)
+:::
+:::
+
+# Objetivos de aprendizagem
+
+Responder as seguintes perguntas....
+
+⬜ O que é o Quarto?
+
+⬜ Como criar um documento simples com Quarto?
+
+⬜ Como criar uma apresentação?
+
+⬜ Como alterar o estilo da apresentação?
+
+⬜ Como disponibilizar a apresentação online?
+
+# O que é o Quarto?
+
+## Seria o Quarto...
+
+::: {.r-stack}
+
+![](images/paste-614B8F2C.png){.fragment fig-align="center"}
+
+![](images/paste-23FE8FE7.png){.fragment .absolute top="20%" left="40%" width="400" height="400"}
+
+:::
+
+# Como criar um documento simples com Quarto?
+
+
+# Como criar uma apresentação?
+
+
+# Como alterar o estilo da apresentação?
+
+
+# Como disponibilizar a apresentação online?
+
+
+## Onde aprender mais...
+
+-   https://quarto.org/docs/guide/
+
+-   
