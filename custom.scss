@@ -21,7 +21,7 @@ $font-family-monospace: 'Inconsolata', monospace  !default;
 // general
 $body-bg: #fff;
 $link-color: #2a547c;
-$presentation-font-size-root: 50pt;
+$presentation-font-size-root: 35pt;
 $body-color: #80868b;
 
 /*-- scss:rules --*/
@@ -102,4 +102,23 @@ h1 strong{
 li::marker .wow{
   content: "🤯";
   padding-inline-start: 1ch;
+}
+
+
+.slide-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 10px !important;
+  max-height: 15% !important;
+  height: 100% !important;
+  width: auto !important;
+  color: $body-color !important;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: unset !important;
+  color: $body-color !important;
 }

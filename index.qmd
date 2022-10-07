@@ -4,6 +4,7 @@ author: "Beatriz Milz"
 date: "Latin-R 2022 | Outubro 2022   <br><br> Slides: **beatrizmilz.github.io/2022-latinr-quarto-tutorial** "
 format: 
   revealjs:
+    logo: "images/logo.png"
     width: 1600
     height: 900
     self-contained: false
@@ -36,7 +37,7 @@ format:
 :::
 
 ::: {.column width="40%"}
-![](img/octocat-1656339210373.png)
+![](images/octocat-1656339210373.png)
 :::
 :::
 
@@ -58,28 +59,164 @@ Responder as seguintes perguntas....
 
 ## Seria o Quarto...
 
-::: {.r-stack}
-
+::: r-stack
 ![](images/paste-614B8F2C.png){.fragment fig-align="center"}
 
 ![](images/paste-23FE8FE7.png){.fragment .absolute top="20%" left="40%" width="400" height="400"}
-
 :::
+
+## O que é o Quarto?
+
+-   Segundo a documentação oficial, o Quarto é um sistema de escrita técnica e científica, de código aberto, baseada no [Pandoc](https://pandoc.org/).
+
+-   O Pandoc é um sistema de conversão de documentos em vários formatos, e também é usado no R Markdown.
+
+-   **O Quarto é a nova geração do R Markdown!**
+
+## R Markdown
+
+-   [Pacote em R](https://rmarkdown.rstudio.com/), para criar documentos reprodutíveis.
+
+-   Muito usado na comunidade de R.
+
+-   Criado e mantido pela [RStudio](https://www.rstudio.com/).
+
+## R Markdown
+
+-   Possui extensões que permitem produzir:
+    -   Sites
+    -   Blogs
+    -   Apresentações
+    -   Textos acadêmicos (artigos científicos, relatórios, teses, etc)
+    -   Livros: Ex: [Análises ecológicas no R](https://analises-ecologicas.com/)
+    -   Entre outros!
+
+## RStudio / Posit
+
+-   Mais conhecida pela IDE RStudio
+
+-   É uma companhia criada em 2009
+
+-   Tem uma grande equipe de pessoas que trabalham no desenvolvimento de pacotes em R
+
+-   Organizam a [rstudio::conf](https://www.rstudio.com/conference/) (em 2020 com mais de 2200 participantes)
+
+-   É muito próxima da comunidade e é uma [B Corporation](https://www.bcorporation.net/pt-br/)
+
+-   É a empresa privada mais importante no contexto da linguagem de programação R do mundo (**minha opinião**)
+
+-   [Saiba mais neste link](https://www.rstudio.com/about/)!
+
+## Porque o Quarto existe?
+
+-   O `{rmarkdown}` é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).
+
+-   O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, **o seu uso acaba ficando limitado às pessoas que usam R**.
+
+-   **O Quarto é um software novo, que não depende do R**!
+
+::: notes
+-   Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.
+:::
+
+## Quais são as similaridades?
+
+-   A estrutura do arquivo é muito similar! Para muitos arquivos, há compatibilidade (bastando alterar a extensão de `.Rmd` para `.qmd`).
+
+-   Podemos adicionar código em R, Python, Julia, etc etc.
+
+-   Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos `.html`), PDFs, `.docx`, apresentações, documentos interativos, livros, e mais está sendo produzido :)
+
+## Como começar a usar o quarto
+
+[Instalar o Quarto:](https://quarto.org/docs/get-started/)
+
+<br>
+
+<center><a href='https://quarto.org/docs/get-started/'> ![](images/install-quarto.png){style="width: 80%; !important" fig-alt="Print screen da página de instalação do Quarto" fig-align="center"} </a></center>
 
 # Como criar um documento simples com Quarto?
 
+## Vamos usar o Quarto na RStudio Cloud! {.nonincremental}
+
+-   Similar ao RStudio IDE: <https://rstudio.cloud/>
+
+-   O quarto já vem instalado!
+
+-   Não tem a opção (até agora) de usar o "New project", apenas o "New file".
+
+-   Atenção ao pacote que é importante instalar antes:
+
+``` r
+install.packages("rmarkdown")
+```
+
+## Criar novo arquivo: New file
+
+<center>![](images/rstudio-newfile.png){style="width: 90%; !important" fig-alt="Print screen da IDE RStudio" fig-align="center"}</center>
+
+## Renderizar o arquivo: Render file
+
+<center>![](images/rstudio-cloud-2.png){style="width: 90%; !important" fig-alt="Print screen da IDE RStudio Cloud" fig-align="center"}</center>
+
+## Visual Editor
+
+
+::: columns
+::: {.column width="45%"}
+-   As versões mais recentes do RStudio permitem usar o Visual Editor.
+
+Leitura indicada:
+
+-  [Exploring RStudio’s Visual Markdown Editor](https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/)
+
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, out.width="90%", fig.align='center', fig.cap="Fonte: RStudio"}
+knitr::include_graphics("https://www.rstudio.com/blog/rstudio-v1-4-preview-visual-markdown-editing/images/visual-editing.png")
+```
+:::
+:::
+
+## Vamos praticar!
+
+![](https://media.giphy.com/media/NbhiwA0C8THIv8KvG5/giphy.gif){fig-align="center" width="30%"}
 
 # Como criar uma apresentação?
 
+TODO
+
+
+
+## Vamos praticar!
+
+![](https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif){fig-align="center" width="30%"}
 
 # Como alterar o estilo da apresentação?
 
+TODO
 
-# Como disponibilizar a apresentação online?
 
+## Vamos praticar!
+
+![](https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif){fig-align="center" width="30%"}
+
+# Como compartilhar a apresentação?
+
+TODO
+
+
+## Vamos praticar!
+
+![](https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif){fig-align="center" width="30%"}
 
 ## Onde aprender mais...
 
--   https://quarto.org/docs/guide/
+-   [Documentação do Quarto](https://quarto.org/docs/gallery/) e a [Galeria](https://quarto.org/docs/gallery).
 
--   
+-   [Não falamos do Quarto](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/) <br>Post em inglês por [Alison Hill](https://www.apreshill.com/)
+
+-   [Reproducible Authoring with Quarto](https://www.youtube.com/watch?v=6p4vOKS6Xls&t=67s) <br> Apresentação em inglês por [Mine Çetinkaya-Rundel](https://mine-cr.com/)
+
+-   APRESENTAÇÕES NA RSTUDIO CONF
