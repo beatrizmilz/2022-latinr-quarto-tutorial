@@ -107,6 +107,12 @@ Responder as seguintes perguntas....
 
 -   [Saiba mais neste link](https://www.rstudio.com/about/)!
 
+- FALAR DA POSIT
+
+
+- LINK DA PALESTRA DO JJ - 100 ANOS.
+
+
 ## Porque o Quarto existe?
 
 -   O `{rmarkdown}` é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).
@@ -185,7 +191,28 @@ knitr::include_graphics("https://www.rstudio.com/blog/rstudio-v1-4-preview-visua
 
 # Como criar uma apresentação?
 
-TODO
+
+
+
+## Altere o cabeçalho do arquivo {auto-animate="true"}
+
+```r
+---
+title: "Título"
+format: html
+editor: visual
+---
+```
+
+## Altere o cabeçalho do arquivo {auto-animate=true}
+
+```r
+---
+title: "Título"
+format: revealjs
+editor: visual
+---
+```
 
 
 
