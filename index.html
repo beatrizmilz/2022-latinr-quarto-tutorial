@@ -427,6 +427,25 @@
 
 <section>
 <section class="title-slide slide level1 center">
+<h1>Sobre esse tutorial….</h1>
+
+</section>
+<section class="slide level2">
+<h2>Faremos muita prática!</h2>
+
+<img data-src="images/livecoding.jpg" class="r-stretch"><div class="{footer}">
+<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Eu não sei tudo :D</h2>
+
+<img data-src="images/something-new.jpg" class="r-stretch"><div class="{footer}">
+<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
+</div>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
 <h1>O que é o Quarto?</h1>
 
 </section>
@@ -458,20 +477,6 @@
 </ul>
 </section>
 <section class="slide level2">
-<h2>R Markdown</h2>
-<ul>
-<li>Possui extensões que permitem produzir:
-<ul>
-<li>Sites</li>
-<li>Blogs</li>
-<li>Apresentações</li>
-<li>Textos acadêmicos (artigos científicos, relatórios, teses, etc)</li>
-<li>Livros: Ex: <a href="https://analises-ecologicas.com/">Análises ecológicas no R</a></li>
-<li>Entre outros!</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
 <h2>RStudio / Posit</h2>
 <ul>
 <li><p>Mais conhecida pela IDE RStudio</p></li>
@@ -480,9 +485,8 @@
 <li><p>Organizam a <a href="https://www.rstudio.com/conference/">rstudio::conf</a> (em 2020 com mais de 2200 participantes)</p></li>
 <li><p>É muito próxima da comunidade e é uma <a href="https://www.bcorporation.net/pt-br/">B Corporation</a></p></li>
 <li><p>É a empresa privada mais importante no contexto da linguagem de programação R do mundo (<strong>minha opinião</strong>)</p></li>
-<li><p><a href="https://www.rstudio.com/about/">Saiba mais neste link</a>!</p></li>
-<li><p>FALAR DA POSIT</p></li>
-<li><p>LINK DA PALESTRA DO JJ - 100 ANOS.</p></li>
+<li><p><a href="https://www.rstudio.com/blog/rstudio-is-becoming-posit/">A empresa está mudando de nome para Posit</a></p></li>
+<li><p><a href="https://www.rstudio.com/conference/2022/keynotes/rstudio-2022-beyond/">Recomendo essa Keynote para saber mais</a></p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -529,10 +533,11 @@
 <h1>Como criar um documento simples com Quarto?</h1>
 
 </section>
-<section class="slide level2 nonincremental">
+<section class="slide level2">
 <h2>Vamos usar o Quarto na RStudio Cloud!</h2>
 <ul>
-<li><p>Similar ao RStudio IDE: <a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a></p></li>
+<li><p><a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a></p></li>
+<li><p>Similar ao RStudio IDE</p></li>
 <li><p>O quarto já vem instalado!</p></li>
 <li><p>Não tem a opção (até agora) de usar o “New project”, apenas o “New file”.</p></li>
 <li><p>Atenção ao pacote que é importante instalar antes:</p></li>
@@ -600,11 +605,14 @@
 <span id="cb3-3" class="hljs-ln-code"><a href="#cb3-3"></a>format<span class="sc">:</span> revealjs</span>
 <span id="cb3-4" class="hljs-ln-code"><a href="#cb3-4"></a>editor<span class="sc">:</span> visual</span>
 <span id="cb3-5" class="hljs-ln-code"><a href="#cb3-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Os slides são separados considerando os títulos e subtítulos: <code>#</code> e <code>##</code>.</li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>Vamos praticar!</h2>
 
-<img data-src="https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif" style="width:30.0%" class="r-stretch quarto-figure-center"></section></section>
+<img data-src="https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif" class="r-stretch quarto-figure-center"></section></section>
 <section>
 <section class="title-slide slide level1 center">
 <h1>Como alterar o estilo da apresentação?</h1>
@@ -617,19 +625,41 @@
 <section>
 <section class="title-slide slide level1 center">
 <h1>Como compartilhar a apresentação?</h1>
-<p>TODO</p>
+
+</section>
+<section class="slide level2">
+<h2>Algumas formas…</h2>
+<ul>
+<li><p>GitHub Pages</p></li>
+<li><p>Netlify</p></li>
+<li><p><strong>QuartoPub</strong></p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>QuartoPub</h2>
+<ul>
+<li><p>Vamos criar uma conta no Quartopub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
+<li><p>No terminal, usar o comando <code>quarto publish</code> e seguir o passo a passo!</p></li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>Vamos praticar!</h2>
 
-<img data-src="https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif" style="width:30.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif" style="width:30.0%" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>O que mais vocês desejam fazer nos slides?</h1>
+<p><a href="https://quarto.org/docs/presentations/revealjs/demo/index.html#/title-slide">Slide de exemplo</a> e <a href="https://quarto.org/docs/presentations/revealjs/">documentação</a></p>
+</section>
 <section class="slide level2">
 <h2>Onde aprender mais…</h2>
 <ul>
 <li><p><a href="https://quarto.org/docs/gallery/">Documentação do Quarto</a> e a <a href="https://quarto.org/docs/gallery">Galeria</a>.</p></li>
 <li><p><a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/">Não falamos do Quarto</a> <br>Post em inglês por <a href="https://www.apreshill.com/">Alison Hill</a></p></li>
 <li><p><a href="https://www.youtube.com/watch?v=6p4vOKS6Xls&amp;t=67s">Reproducible Authoring with Quarto</a> <br> Apresentação em inglês por <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a></p></li>
-<li><p>APRESENTAÇÕES NA RSTUDIO CONF</p></li>
+<li><p><a href="https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/">Conteúdos sobre o Quarto na RStudio Conf 2022</a></p></li>
+<li><p><a href="https://rstudio-conf-2022.github.io/get-started-quarto/">Workshop Get Started with Quarto</a></p></li>
+<li><p><a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a></p></li>
 </ul>
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">

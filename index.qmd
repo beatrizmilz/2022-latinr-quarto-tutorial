@@ -55,6 +55,28 @@ Responder as seguintes perguntas....
 
 ⬜ Como disponibilizar a apresentação online?
 
+
+# Sobre esse tutorial....
+
+## Faremos muita prática!
+
+![](images/livecoding.jpg)
+
+::: {footer}
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+
+
+## Eu não sei tudo :D
+
+![](images/something-new.jpg)
+
+::: {footer}
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+
 # O que é o Quarto?
 
 ## Seria o Quarto...
@@ -81,16 +103,6 @@ Responder as seguintes perguntas....
 
 -   Criado e mantido pela [RStudio](https://www.rstudio.com/).
 
-## R Markdown
-
--   Possui extensões que permitem produzir:
-    -   Sites
-    -   Blogs
-    -   Apresentações
-    -   Textos acadêmicos (artigos científicos, relatórios, teses, etc)
-    -   Livros: Ex: [Análises ecológicas no R](https://analises-ecologicas.com/)
-    -   Entre outros!
-
 ## RStudio / Posit
 
 -   Mais conhecida pela IDE RStudio
@@ -105,13 +117,9 @@ Responder as seguintes perguntas....
 
 -   É a empresa privada mais importante no contexto da linguagem de programação R do mundo (**minha opinião**)
 
--   [Saiba mais neste link](https://www.rstudio.com/about/)!
+-   [A empresa está mudando de nome para Posit](https://www.rstudio.com/blog/rstudio-is-becoming-posit/)
 
-- FALAR DA POSIT
-
-
-- LINK DA PALESTRA DO JJ - 100 ANOS.
-
+-   [Recomendo essa Keynote para saber mais](https://www.rstudio.com/conference/2022/keynotes/rstudio-2022-beyond/)
 
 ## Porque o Quarto existe?
 
@@ -133,6 +141,9 @@ Responder as seguintes perguntas....
 
 -   Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos `.html`), PDFs, `.docx`, apresentações, documentos interativos, livros, e mais está sendo produzido :)
 
+
+
+
 ## Como começar a usar o quarto
 
 [Instalar o Quarto:](https://quarto.org/docs/get-started/)
@@ -143,9 +154,11 @@ Responder as seguintes perguntas....
 
 # Como criar um documento simples com Quarto?
 
-## Vamos usar o Quarto na RStudio Cloud! {.nonincremental}
+## Vamos usar o Quarto na RStudio Cloud!
 
--   Similar ao RStudio IDE: <https://rstudio.cloud/>
+- <https://rstudio.cloud/>
+
+-   Similar ao RStudio IDE
 
 -   O quarto já vem instalado!
 
@@ -167,15 +180,13 @@ install.packages("rmarkdown")
 
 ## Visual Editor
 
-
 ::: columns
 ::: {.column width="45%"}
 -   As versões mais recentes do RStudio permitem usar o Visual Editor.
 
 Leitura indicada:
 
--  [Exploring RStudio’s Visual Markdown Editor](https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/)
-
+-   [Exploring RStudio's Visual Markdown Editor](https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/)
 :::
 
 ::: {.column width="50%"}
@@ -191,12 +202,9 @@ knitr::include_graphics("https://www.rstudio.com/blog/rstudio-v1-4-preview-visua
 
 # Como criar uma apresentação?
 
-
-
-
 ## Altere o cabeçalho do arquivo {auto-animate="true"}
 
-```r
+``` r
 ---
 title: "Título"
 format: html
@@ -204,9 +212,9 @@ editor: visual
 ---
 ```
 
-## Altere o cabeçalho do arquivo {auto-animate=true}
+## Altere o cabeçalho do arquivo {auto-animate="true"}
 
-```r
+``` r
 ---
 title: "Título"
 format: revealjs
@@ -216,14 +224,16 @@ editor: visual
 
 
 
+
+-   Os slides são separados considerando os títulos e subtítulos: `#` e `##`.
+
 ## Vamos praticar!
 
-![](https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif){fig-align="center" width="30%"}
+![](https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif){fig-align="center" style='max-width:30%;'}
 
 # Como alterar o estilo da apresentação?
 
 TODO
-
 
 ## Vamos praticar!
 
@@ -231,12 +241,27 @@ TODO
 
 # Como compartilhar a apresentação?
 
-TODO
+## Algumas formas...
 
+- GitHub Pages
+
+- Netlify
+
+- **QuartoPub**
+
+## QuartoPub
+
+-   Vamos criar uma conta no Quartopub: <https://quartopub.com/>
+
+-   No terminal, usar o comando `quarto publish` e seguir o passo a passo!
 
 ## Vamos praticar!
 
 ![](https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif){fig-align="center" width="30%"}
+
+# O que mais vocês desejam fazer nos slides?
+
+[Slide de exemplo](https://quarto.org/docs/presentations/revealjs/demo/index.html#/title-slide) e [documentação](https://quarto.org/docs/presentations/revealjs/)
 
 ## Onde aprender mais...
 
@@ -246,4 +271,8 @@ TODO
 
 -   [Reproducible Authoring with Quarto](https://www.youtube.com/watch?v=6p4vOKS6Xls&t=67s) <br> Apresentação em inglês por [Mine Çetinkaya-Rundel](https://mine-cr.com/)
 
--   APRESENTAÇÕES NA RSTUDIO CONF
+-   [Conteúdos sobre o Quarto na RStudio Conf 2022](https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/)
+
+- [Workshop Get Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/) 
+
+- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto)
