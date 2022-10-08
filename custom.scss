@@ -26,10 +26,10 @@ $body-color: #80868b;
 
 /*-- scss:rules --*/
 .reveal pre code {
-  background-color: #f8f8f8;
-  font-size: 1.5em;
+  background-color: #f5faff;
+  font-size: 1em;
   padding: 0em;
-  line-height: 1.1em;
+  line-height: 1.5em;
 }
 
 .codeyml {
@@ -38,9 +38,8 @@ $body-color: #80868b;
 }
 
 .reveal pre.sourceCode code {
-    background-color: #fff;
+    background-color: #f5faff;
     padding: 0px 0px;
-    max-height: 100%;
     white-space: pre;
 }
 

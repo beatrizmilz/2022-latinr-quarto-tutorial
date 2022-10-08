@@ -416,13 +416,23 @@
 </div>
 </section>
 <section class="title-slide slide level1 center">
+<h1>Tarefas iniciais</h1>
+<p>Caso não tenha, crie uma conta nos serviços:</p>
+<ul>
+<li><p>RStudio Cloud: <a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a></p></li>
+<li><p>QuartoPub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
+</ul>
+<p>Dica: Você pode criar uma conta vinculada ao Gmail ou GitHub.</p>
+</section>
+
+<section class="title-slide slide level1 center">
 <h1>Objetivos de aprendizagem</h1>
 <p>Responder as seguintes perguntas….</p>
 <p>⬜ O que é o Quarto?</p>
-<p>⬜ Como criar um documento simples com Quarto?</p>
+<p>⬜ Como criar um documento simples ?</p>
 <p>⬜ Como criar uma apresentação?</p>
-<p>⬜ Como alterar o estilo da apresentação?</p>
 <p>⬜ Como disponibilizar a apresentação online?</p>
+<p>⬜ Como alterar o estilo da apresentação?</p>
 </section>
 
 <section>
@@ -433,14 +443,14 @@
 <section class="slide level2">
 <h2>Faremos muita prática!</h2>
 
-<img data-src="images/livecoding.jpg" class="r-stretch"><div class="{footer}">
+<img data-src="images/livecoding.jpg" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
 </div>
 </section>
 <section class="slide level2">
-<h2>Eu não sei tudo :D</h2>
+<h2>Tem novidades surgindo com frequência!</h2>
 
-<img data-src="images/something-new.jpg" class="r-stretch"><div class="{footer}">
+<img data-src="images/something-new.jpg" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
 </div>
 </section></section>
@@ -457,42 +467,24 @@
 <p><img data-src="images/paste-614B8F2C.png" class="fragment"></p>
 </figure>
 </div>
-<p><img data-src="images/paste-23FE8FE7.png" class="fragment absolute" style="top: 20%; left: 40%; width: 400px; height: 400px; "></p>
+<p><img data-src="images/paste-23FE8FE7.png" class="fragment absolute" style="top: 15%; left: 40%; width: 400px; height: 400px; "></p>
 </div>
 </section>
 <section class="slide level2">
 <h2>O que é o Quarto?</h2>
 <ul>
-<li><p>Segundo a documentação oficial, o Quarto é um sistema de escrita técnica e científica, de código aberto, baseada no <a href="https://pandoc.org/">Pandoc</a>.</p></li>
-<li><p>O Pandoc é um sistema de conversão de documentos em vários formatos, e também é usado no R Markdown.</p></li>
+<li>O Quarto é um sistema de escrita técnica e científica, de código aberto.</li>
+</ul>
+
+<img data-src="images/quarto_schematic.png" data-out.width="50%" class="r-stretch quarto-figure-center"><p class="caption">A schematic representing the multi-language input (e.g.&nbsp;Python, R, Observable, Julia) and multi-format output (e.g.&nbsp;PDF, html, Word documents, and more) versatility of Quarto</p><div class="footer">
+<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Por que o Quarto existe?</h2>
+<ul>
 <li><p><strong>O Quarto é a nova geração do R Markdown!</strong></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>R Markdown</h2>
-<ul>
-<li><p><a href="https://rmarkdown.rstudio.com/">Pacote em R</a>, para criar documentos reprodutíveis.</p></li>
-<li><p>Muito usado na comunidade de R.</p></li>
-<li><p>Criado e mantido pela <a href="https://www.rstudio.com/">RStudio</a>.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>RStudio / Posit</h2>
-<ul>
-<li><p>Mais conhecida pela IDE RStudio</p></li>
-<li><p>É uma companhia criada em 2009</p></li>
-<li><p>Tem uma grande equipe de pessoas que trabalham no desenvolvimento de pacotes em R</p></li>
-<li><p>Organizam a <a href="https://www.rstudio.com/conference/">rstudio::conf</a> (em 2020 com mais de 2200 participantes)</p></li>
-<li><p>É muito próxima da comunidade e é uma <a href="https://www.bcorporation.net/pt-br/">B Corporation</a></p></li>
-<li><p>É a empresa privada mais importante no contexto da linguagem de programação R do mundo (<strong>minha opinião</strong>)</p></li>
-<li><p><a href="https://www.rstudio.com/blog/rstudio-is-becoming-posit/">A empresa está mudando de nome para Posit</a></p></li>
-<li><p><a href="https://www.rstudio.com/conference/2022/keynotes/rstudio-2022-beyond/">Recomendo essa Keynote para saber mais</a></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Porque o Quarto existe?</h2>
-<ul>
-<li><p>O <code>{rmarkdown}</code> é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).</p></li>
+<li><p>O rmarkdown é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).</p></li>
 <li><p>O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, <strong>o seu uso acaba ficando limitado às pessoas que usam R</strong>.</p></li>
 <li><p><strong>O Quarto é um software novo, que não depende do R</strong>!</p></li>
 </ul>
@@ -530,19 +522,29 @@
 </section></section>
 <section>
 <section class="title-slide slide level1 center">
-<h1>Como criar um documento simples com Quarto?</h1>
+<h1>Como criar um documento simples?</h1>
 
 </section>
 <section class="slide level2">
 <h2>Vamos usar o Quarto na RStudio Cloud!</h2>
 <ul>
-<li><p><a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a></p></li>
+<li><p><a href="https://rstudio.cloud/content/4688214" class="uri">https://rstudio.cloud/content/4688214</a></p></li>
 <li><p>Similar ao RStudio IDE</p></li>
 <li><p>O quarto já vem instalado!</p></li>
-<li><p>Não tem a opção (até agora) de usar o “New project”, apenas o “New file”.</p></li>
-<li><p>Atenção ao pacote que é importante instalar antes:</p></li>
 </ul>
+</section>
+<section class="slide level2">
+<h2>Engines</h2>
+<ul>
+<li>Ao criar um novo arquivo com Quarto, podemos escolher entre duas <em>engines</em>: knitr ou jupyter.</li>
+</ul>
+<h3>Com knitr</h3>
+<p>Caso não tenha o pacote rmarkdown instalado, execute no console:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<h3>Com jupyter</h3>
+<p>Caso não tenha o jupyter instalado, execute no terminal:</p>
+<pre><code>python3 -m pip install jupyter</code></pre>
 </section>
 <section class="slide level2">
 <h2>Criar novo arquivo: New file</h2>
@@ -581,10 +583,9 @@
 </div>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 center">
 <h2>Vamos praticar!</h2>
-
-<img data-src="https://media.giphy.com/media/NbhiwA0C8THIv8KvG5/giphy.gif" style="width:30.0%" class="r-stretch quarto-figure-center"></section></section>
+</section></section>
 <section>
 <section class="title-slide slide level1 center">
 <h1>Como criar uma apresentação?</h1>
@@ -592,36 +593,28 @@
 </section>
 <section class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href="#cb2-1"></a><span class="sc">---</span></span>
-<span id="cb2-2" class="hljs-ln-code"><a href="#cb2-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
-<span id="cb2-3" class="hljs-ln-code"><a href="#cb2-3"></a>format<span class="sc">:</span> html</span>
-<span id="cb2-4" class="hljs-ln-code"><a href="#cb2-4"></a>editor<span class="sc">:</span> visual</span>
-<span id="cb2-5" class="hljs-ln-code"><a href="#cb2-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href="#cb3-1"></a><span class="sc">---</span></span>
+<span id="cb3-2" class="hljs-ln-code"><a href="#cb3-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
+<span id="cb3-3" class="hljs-ln-code"><a href="#cb3-3"></a>format<span class="sc">:</span> html</span>
+<span id="cb3-4" class="hljs-ln-code"><a href="#cb3-4"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb3-5" class="hljs-ln-code"><a href="#cb3-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href="#cb3-1"></a><span class="sc">---</span></span>
-<span id="cb3-2" class="hljs-ln-code"><a href="#cb3-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
-<span id="cb3-3" class="hljs-ln-code"><a href="#cb3-3"></a>format<span class="sc">:</span> revealjs</span>
-<span id="cb3-4" class="hljs-ln-code"><a href="#cb3-4"></a>editor<span class="sc">:</span> visual</span>
-<span id="cb3-5" class="hljs-ln-code"><a href="#cb3-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href="#cb4-1"></a><span class="sc">---</span></span>
+<span id="cb4-2" class="hljs-ln-code"><a href="#cb4-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
+<span id="cb4-3" class="hljs-ln-code"><a href="#cb4-3"></a>format<span class="sc">:</span> revealjs</span>
+<span id="cb4-4" class="hljs-ln-code"><a href="#cb4-4"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb4-5" class="hljs-ln-code"><a href="#cb4-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Os slides são separados considerando os títulos e subtítulos: <code>#</code> e <code>##</code>.</li>
+<li><p>Os slides são separados considerando os títulos e subtítulos: <code>#</code> e <code>##</code>.</p></li>
+<li><p>Use <code>#</code> para criar uma nova seção.</p></li>
+<li><p>Use <code>##</code> para criar um novo slide.</p></li>
 </ul>
 </section>
-<section class="slide level2">
+<section class="slide level2 center">
 <h2>Vamos praticar!</h2>
-
-<img data-src="https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif" class="r-stretch quarto-figure-center"></section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como alterar o estilo da apresentação?</h1>
-<p>TODO</p>
-</section>
-<section class="slide level2">
-<h2>Vamos praticar!</h2>
-
-<img data-src="https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif" style="width:30.0%" class="r-stretch quarto-figure-center"></section></section>
+</section></section>
 <section>
 <section class="title-slide slide level1 center">
 <h1>Como compartilhar a apresentação?</h1>
@@ -636,16 +629,192 @@
 </ul>
 </section>
 <section class="slide level2">
-<h2>QuartoPub</h2>
+<h2>Primeiros passos usando Quarto na linha de comando</h2>
 <ul>
-<li><p>Vamos criar uma conta no Quartopub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
-<li><p>No terminal, usar o comando <code>quarto publish</code> e seguir o passo a passo!</p></li>
+<li><p>O Quarto é um CLI: Command Line Interface - Interface de linha de comando.</p></li>
+<li><p>Podemos usar o Quarto no terminal.</p></li>
 </ul>
 </section>
 <section class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">/cloud/project$</span> quarto help</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="ex">Usage:</span>   quarto </span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="ex">Version:</span> 1.1.251</span>
+<span id="cb5-5"><a href="#cb5-5"></a>                  </span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="ex">Description:</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="ex">Quarto</span> CLI</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a>  <span class="ex">Options:</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a></span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="ex">-h,</span> <span class="at">--help</span>     <span class="at">-</span> Show this help.                            </span>
+<span id="cb5-14"><a href="#cb5-14"></a>    <span class="ex">-V,</span> <span class="at">--version</span>  <span class="at">-</span> Show the version number for this program.  </span>
+<span id="cb5-15"><a href="#cb5-15"></a></span>
+<span id="cb5-16"><a href="#cb5-16"></a>  <span class="ex">Commands:</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18"></a>    <span class="ex">render</span>          [input] [args...]   <span class="at">-</span> Render input file<span class="er">(</span><span class="ex">s</span><span class="kw">)</span> <span class="ex">to</span> various document types.            </span>
+<span id="cb5-19"><a href="#cb5-19"></a>    <span class="ex">preview</span>         [file] [args...]    <span class="at">-</span> Render and preview a document or website project.          </span>
+<span id="cb5-20"><a href="#cb5-20"></a>    <span class="ex">serve</span>           [input]             <span class="at">-</span> Serve a Shiny interactive document.                        </span>
+<span id="cb5-21"><a href="#cb5-21"></a>    <span class="ex">create-project</span>  [dir]               <span class="at">-</span> Create a project for rendering multiple documents          </span>
+<span id="cb5-22"><a href="#cb5-22"></a>    <span class="ex">convert</span>         <span class="op">&lt;</span>input<span class="op">&gt;</span>             - Convert documents to alternate representations.            </span>
+<span id="cb5-23"><a href="#cb5-23"></a>    <span class="ex">pandoc</span>          [args...]           <span class="at">-</span> Run the version of Pandoc embedded within Quarto.          </span>
+<span id="cb5-24"><a href="#cb5-24"></a>    <span class="ex">run</span>             [script] [args...]  <span class="at">-</span> Run a TypeScript, R, Python, or Lua script.                </span>
+<span id="cb5-25"><a href="#cb5-25"></a>    <span class="fu">install</span>         <span class="op">&lt;</span>type<span class="op">&gt;</span> [target]     <span class="at">-</span> Installs an extension or global dependency.                </span>
+<span id="cb5-26"><a href="#cb5-26"></a>    <span class="ex">publish</span>         [provider] [path]   <span class="at">-</span> Publish a document or project. Available providers include:</span>
+<span id="cb5-27"><a href="#cb5-27"></a>    <span class="ex">check</span>           [target]            <span class="at">-</span> Verify correct functioning of Quarto installation.         </span>
+<span id="cb5-28"><a href="#cb5-28"></a>    <span class="bu">help</span>            [command]           <span class="at">-</span> Show this help or the help of a sub-command.               </span>
+<span id="cb5-29"><a href="#cb5-29"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+<h2>QuartoPub</h2>
+<ul>
+<li><p>Vamos disponibilizar nossa apresentação no QuartoPub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
+<li><p>No terminal, usar o comando <code>quarto publish nome-do-arquivo.qmd</code> e seguir o passo a passo (no slide seguinte temos um exemplo).</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">/cloud/project$</span> quarto publish index.qmd</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="ex">?</span> Provider: › Quarto Pub</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="ex">?</span> Authorize <span class="er">(</span><span class="ex">Y/n</span><span class="kw">)</span> <span class="ex">›</span> Yes</span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="ex">Please</span> authorize by opening this url: https://quartopub.com/authorize<span class="pp">?</span>id=......</span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="ex">?</span> Document name: › Use another name...</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="ex">?</span> Publish with name: › nome-da-apresentacao</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="ex">[✓]</span> Creating quarto-pub document</span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="ex">[✓]</span> Preparing to publish document</span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="ex">[✓]</span> Uploading files <span class="er">(</span><span class="bu">complete</span><span class="kw">)</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="ex">[✓]</span> Deploying published document</span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="ex">[✓]</span> Published document: https://quartopub.com/sites/nome-usuario/nome-da-apresentacao</span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="ex">[✓]</span> Account site updated: https://nome-usuario.quarto.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2 center">
 <h2>Vamos praticar!</h2>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Como alterar o estilo da apresentação?</h1>
 
-<img data-src="https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif" style="width:30.0%" class="r-stretch quarto-figure-center"></section></section>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Usando temas</h2>
+<ul>
+<li>Existem alguns <a href="https://quarto.org/docs/presentations/revealjs/themes.html">temas</a> disponíveis para usar:</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a href="#cb7-1"></a><span class="sc">---</span></span>
+<span id="cb7-2" class="hljs-ln-code"><a href="#cb7-2"></a>format<span class="sc">:</span> revealjs</span>
+<span id="cb7-3" class="hljs-ln-code"><a href="#cb7-3"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Usando temas</h2>
+<ul>
+<li>Existem alguns <a href="https://quarto.org/docs/presentations/revealjs/themes.html">temas</a> disponíveis para usar:</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb8-1" class="hljs-ln-code"><a href="#cb8-1"></a><span class="sc">---</span></span>
+<span id="cb8-2" class="hljs-ln-code"><a href="#cb8-2"></a>format<span class="sc">:</span></span>
+<span id="cb8-3" class="hljs-ln-code"><a href="#cb8-3"></a>  revealjs<span class="sc">:</span> </span>
+<span id="cb8-4" class="hljs-ln-code"><a href="#cb8-4"></a>    theme<span class="sc">:</span> moon</span>
+<span id="cb8-5" class="hljs-ln-code"><a href="#cb8-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+<h2>Temas disponíveis</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>beige</p></li>
+<li><p>blood</p></li>
+<li><p>dark</p></li>
+<li><p>league</p></li>
+<li><p>moon</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>night</p></li>
+<li><p>serif</p></li>
+<li><p>simple</p></li>
+<li><p>sky</p></li>
+<li><p>solarized</p></li>
+</ul>
+</div>
+</div>
+<p>Tema padrão: <strong>default</strong></p>
+<div class="footer">
+<p>Fonte: <a href="https://quarto.org/docs/presentations/revealjs/themes.html">Documentação do Quarto</a></p>
+</div>
+</section>
+<section class="slide level2 center">
+<h2>Vamos praticar!</h2>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Personalizando o estilo</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href="#cb9-1"></a><span class="sc">---</span></span>
+<span id="cb9-2" class="hljs-ln-code"><a href="#cb9-2"></a>format<span class="sc">:</span></span>
+<span id="cb9-3" class="hljs-ln-code"><a href="#cb9-3"></a>  revealjs<span class="sc">:</span> </span>
+<span id="cb9-4" class="hljs-ln-code"><a href="#cb9-4"></a>    theme<span class="sc">:</span> moon</span>
+<span id="cb9-5" class="hljs-ln-code"><a href="#cb9-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Personalizando o estilo</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb10-1" class="hljs-ln-code"><a href="#cb10-1"></a><span class="sc">---</span></span>
+<span id="cb10-2" class="hljs-ln-code"><a href="#cb10-2"></a>format<span class="sc">:</span></span>
+<span id="cb10-3" class="hljs-ln-code"><a href="#cb10-3"></a>  revealjs<span class="sc">:</span> </span>
+<span id="cb10-4" class="hljs-ln-code"><a href="#cb10-4"></a>    theme<span class="sc">:</span> [default, custom.scss]</span>
+<span id="cb10-5" class="hljs-ln-code"><a href="#cb10-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Crie um arquivo <code>custom.scss</code> para adicionar novas regras de estilo por lá.</p>
+<ul>
+<li><p>Nesse arquivo teremos duas secões:</p>
+<ul>
+<li><p><code>/*-- scss:defaults --*/</code> - <a href="https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables">SASS variables</a></p></li>
+<li><p><code>/*-- scss:rules --*/</code> - regras em CSS</p></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Copie o código de exemplo a seguir:</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co">// importing fonts</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Lato&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="co">// fonts</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="va">$font-family-sans-serif</span>: <span class="st">'Lato'</span><span class="op">,</span> Tahoma<span class="op">,</span> <span class="dv">sans-serif</span> <span class="at">!default</span><span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a></span>
+<span id="cb11-9"><a href="#cb11-9"></a><span class="co">// headings</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="va">$presentation-heading-font</span>: <span class="st">'Montserrat'</span><span class="op">,</span>  Tahoma<span class="op">,</span> <span class="dv">sans-serif</span>  <span class="at">!default</span><span class="op">;</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a><span class="va">$presentation-heading-color</span>: <span class="cn">#4c83b6</span> <span class="at">!default</span><span class="op">;</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a></span>
+<span id="cb11-13"><a href="#cb11-13"></a></span>
+<span id="cb11-14"><a href="#cb11-14"></a><span class="va">$body-bg</span>: <span class="cn">#191919</span><span class="op">;</span></span>
+<span id="cb11-15"><a href="#cb11-15"></a><span class="va">$body-color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb11-16"><a href="#cb11-16"></a><span class="va">$link-color</span>: <span class="cn">#42affa</span><span class="op">;</span></span>
+<span id="cb11-17"><a href="#cb11-17"></a></span>
+<span id="cb11-18"><a href="#cb11-18"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb11-19"><a href="#cb11-19"></a></span>
+<span id="cb11-20"><a href="#cb11-20"></a></span>
+<span id="cb11-21"><a href="#cb11-21"></a><span class="fu">.slide-logo</span> {</span>
+<span id="cb11-22"><a href="#cb11-22"></a>  <span class="kw">display</span>: <span class="dv">block</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-23"><a href="#cb11-23"></a>  <span class="kw">position</span>: <span class="dv">fixed</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-24"><a href="#cb11-24"></a>  <span class="kw">top</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-25"><a href="#cb11-25"></a>  <span class="kw">right</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-26"><a href="#cb11-26"></a>  <span class="kw">max-height</span>: <span class="dv">15</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-27"><a href="#cb11-27"></a>  <span class="kw">height</span>: <span class="dv">100</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-28"><a href="#cb11-28"></a>  <span class="kw">width</span>: <span class="bu">auto</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-29"><a href="#cb11-29"></a>  <span class="kw">color</span>: <span class="va">$body-color</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-30"><a href="#cb11-30"></a>}</span>
+<span id="cb11-31"><a href="#cb11-31"></a></span>
+<span id="cb11-32"><a href="#cb11-32"></a><span class="fu">.slide-number</span><span class="op">,</span> <span class="fu">.reveal.has-logo</span> <span class="fu">.slide-number</span> {</span>
+<span id="cb11-33"><a href="#cb11-33"></a>  <span class="kw">bottom</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-34"><a href="#cb11-34"></a>  <span class="kw">right</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-35"><a href="#cb11-35"></a>  <span class="kw">top</span>: <span class="bu">unset</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-36"><a href="#cb11-36"></a>  <span class="kw">color</span>: <span class="va">$body-color</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb11-37"><a href="#cb11-37"></a>}</span>
+<span id="cb11-38"><a href="#cb11-38"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2 center">
+<h2>Vamos praticar!</h2>
+</section></section>
 <section>
 <section class="title-slide slide level1 center">
 <h1>O que mais vocês desejam fazer nos slides?</h1>

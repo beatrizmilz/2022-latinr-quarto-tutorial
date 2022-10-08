@@ -41,41 +41,49 @@ format:
 :::
 :::
 
+# Tarefas iniciais
+
+Caso não tenha, crie uma conta nos serviços:
+
+- RStudio Cloud: <https://rstudio.cloud/>
+
+- QuartoPub: <https://quartopub.com/>
+
+
+Dica: Você pode criar uma conta vinculada ao Gmail ou GitHub.
+
+
 # Objetivos de aprendizagem
 
 Responder as seguintes perguntas....
 
 ⬜ O que é o Quarto?
 
-⬜ Como criar um documento simples com Quarto?
+⬜ Como criar um documento simples ?
 
 ⬜ Como criar uma apresentação?
 
-⬜ Como alterar o estilo da apresentação?
-
 ⬜ Como disponibilizar a apresentação online?
 
+⬜ Como alterar o estilo da apresentação?
 
 # Sobre esse tutorial....
 
 ## Faremos muita prática!
 
-![](images/livecoding.jpg)
+![](images/livecoding.jpg){fig-align="center"}
 
-::: {footer}
+::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
+## Tem novidades surgindo com frequência!
 
+![](images/something-new.jpg){fig-align="center"}
 
-## Eu não sei tudo :D
-
-![](images/something-new.jpg)
-
-::: {footer}
+::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
-
 
 # O que é o Quarto?
 
@@ -84,46 +92,25 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 ::: r-stack
 ![](images/paste-614B8F2C.png){.fragment fig-align="center"}
 
-![](images/paste-23FE8FE7.png){.fragment .absolute top="20%" left="40%" width="400" height="400"}
+![](images/paste-23FE8FE7.png){.fragment .absolute top="15%" left="40%" width="400" height="400"}
 :::
 
 ## O que é o Quarto?
 
--   Segundo a documentação oficial, o Quarto é um sistema de escrita técnica e científica, de código aberto, baseada no [Pandoc](https://pandoc.org/).
+-   O Quarto é um sistema de escrita técnica e científica, de código aberto.
 
--   O Pandoc é um sistema de conversão de documentos em vários formatos, e também é usado no R Markdown.
+![A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto](images/quarto_schematic.png){fig-align="center" out.width="50%"}
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst).
+:::
+
+
+## Por que o Quarto existe?
 
 -   **O Quarto é a nova geração do R Markdown!**
 
-## R Markdown
-
--   [Pacote em R](https://rmarkdown.rstudio.com/), para criar documentos reprodutíveis.
-
--   Muito usado na comunidade de R.
-
--   Criado e mantido pela [RStudio](https://www.rstudio.com/).
-
-## RStudio / Posit
-
--   Mais conhecida pela IDE RStudio
-
--   É uma companhia criada em 2009
-
--   Tem uma grande equipe de pessoas que trabalham no desenvolvimento de pacotes em R
-
--   Organizam a [rstudio::conf](https://www.rstudio.com/conference/) (em 2020 com mais de 2200 participantes)
-
--   É muito próxima da comunidade e é uma [B Corporation](https://www.bcorporation.net/pt-br/)
-
--   É a empresa privada mais importante no contexto da linguagem de programação R do mundo (**minha opinião**)
-
--   [A empresa está mudando de nome para Posit](https://www.rstudio.com/blog/rstudio-is-becoming-posit/)
-
--   [Recomendo essa Keynote para saber mais](https://www.rstudio.com/conference/2022/keynotes/rstudio-2022-beyond/)
-
-## Porque o Quarto existe?
-
--   O `{rmarkdown}` é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).
+-   O rmarkdown é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).
 
 -   O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, **o seu uso acaba ficando limitado às pessoas que usam R**.
 
@@ -141,9 +128,6 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 -   Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos `.html`), PDFs, `.docx`, apresentações, documentos interativos, livros, e mais está sendo produzido :)
 
-
-
-
 ## Como começar a usar o quarto
 
 [Instalar o Quarto:](https://quarto.org/docs/get-started/)
@@ -152,22 +136,37 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 <center><a href='https://quarto.org/docs/get-started/'> ![](images/install-quarto.png){style="width: 80%; !important" fig-alt="Print screen da página de instalação do Quarto" fig-align="center"} </a></center>
 
-# Como criar um documento simples com Quarto?
+# Como criar um documento simples?
 
 ## Vamos usar o Quarto na RStudio Cloud!
 
-- <https://rstudio.cloud/>
+-   <https://rstudio.cloud/content/4688214>
 
 -   Similar ao RStudio IDE
 
 -   O quarto já vem instalado!
 
--   Não tem a opção (até agora) de usar o "New project", apenas o "New file".
+## Engines 
 
--   Atenção ao pacote que é importante instalar antes:
+- Ao criar um novo arquivo com Quarto, podemos escolher entre duas *engines*: knitr ou jupyter.
+
+
+
+### Com knitr
+
+Caso não tenha o pacote rmarkdown instalado, execute no console:
 
 ``` r
 install.packages("rmarkdown")
+```
+<br>
+
+### Com jupyter
+
+Caso não tenha o jupyter instalado, execute no terminal:
+
+```
+python3 -m pip install jupyter
 ```
 
 ## Criar novo arquivo: New file
@@ -196,9 +195,7 @@ knitr::include_graphics("https://www.rstudio.com/blog/rstudio-v1-4-preview-visua
 :::
 :::
 
-## Vamos praticar!
-
-![](https://media.giphy.com/media/NbhiwA0C8THIv8KvG5/giphy.gif){fig-align="center" width="30%"}
+## Vamos praticar! {.center}
 
 # Como criar uma apresentação?
 
@@ -222,42 +219,236 @@ editor: visual
 ---
 ```
 
-
-
-
 -   Os slides são separados considerando os títulos e subtítulos: `#` e `##`.
 
-## Vamos praticar!
+- Use  `#` para criar uma nova seção.
 
-![](https://media.giphy.com/media/eJG93okDlbbMSWreuz/giphy.gif){fig-align="center" style='max-width:30%;'}
+- Use `##` para criar um novo slide.
 
-# Como alterar o estilo da apresentação?
 
-TODO
-
-## Vamos praticar!
-
-![](https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif){fig-align="center" width="30%"}
+## Vamos praticar! {.center}
 
 # Como compartilhar a apresentação?
 
 ## Algumas formas...
 
-- GitHub Pages
+-   GitHub Pages
 
-- Netlify
+-   Netlify
 
-- **QuartoPub**
+-   **QuartoPub**
+
+## Primeiros passos usando Quarto na linha de comando
+
+-   O Quarto é um CLI: Command Line Interface - Interface de linha de comando.
+
+-   Podemos usar o Quarto no terminal.
+
+## 
+
+``` bash
+/cloud/project$ quarto help
+
+  Usage:   quarto 
+  Version: 1.1.251
+                  
+
+  Description:
+
+    Quarto CLI
+
+  Options:
+
+    -h, --help     - Show this help.                            
+    -V, --version  - Show the version number for this program.  
+
+  Commands:
+
+    render          [input] [args...]   - Render input file(s) to various document types.            
+    preview         [file] [args...]    - Render and preview a document or website project.          
+    serve           [input]             - Serve a Shiny interactive document.                        
+    create-project  [dir]               - Create a project for rendering multiple documents          
+    convert         <input>             - Convert documents to alternate representations.            
+    pandoc          [args...]           - Run the version of Pandoc embedded within Quarto.          
+    run             [script] [args...]  - Run a TypeScript, R, Python, or Lua script.                
+    install         <type> [target]     - Installs an extension or global dependency.                
+    publish         [provider] [path]   - Publish a document or project. Available providers include:
+    check           [target]            - Verify correct functioning of Quarto installation.         
+    help            [command]           - Show this help or the help of a sub-command.               
+
+
+```
 
 ## QuartoPub
 
--   Vamos criar uma conta no Quartopub: <https://quartopub.com/>
+-   Vamos disponibilizar nossa apresentação no QuartoPub: <https://quartopub.com/>
 
--   No terminal, usar o comando `quarto publish` e seguir o passo a passo!
+-   No terminal, usar o comando `quarto publish nome-do-arquivo.qmd` e seguir o passo a passo (no slide seguinte temos um exemplo).
 
-## Vamos praticar!
+##
 
-![](https://media.giphy.com/media/aNqEFrYVnsS52/giphy.gif){fig-align="center" width="30%"}
+``` bash
+/cloud/project$ quarto publish index.qmd
+? Provider: › Quarto Pub
+? Authorize (Y/n) › Yes
+Please authorize by opening this url: https://quartopub.com/authorize?id=......
+? Document name: › Use another name...
+? Publish with name: › nome-da-apresentacao
+
+[✓] Creating quarto-pub document
+[✓] Preparing to publish document
+[✓] Uploading files (complete)
+[✓] Deploying published document
+[✓] Published document: https://quartopub.com/sites/nome-usuario/nome-da-apresentacao
+[✓] Account site updated: https://nome-usuario.quarto.pub
+```
+
+
+## Vamos praticar! {.center}
+
+# Como alterar o estilo da apresentação?
+
+## Usando temas {auto-animate="true"}
+
+-   Existem alguns [temas](https://quarto.org/docs/presentations/revealjs/themes.html) disponíveis para usar:
+
+``` r
+---
+format: revealjs
+---
+```
+
+## Usando temas {auto-animate="true"}
+
+-   Existem alguns [temas](https://quarto.org/docs/presentations/revealjs/themes.html) disponíveis para usar:
+
+``` r
+---
+format:
+  revealjs: 
+    theme: moon
+---
+```
+
+## Temas disponíveis
+
+
+
+::: columns
+::: {.column width="50%"}
+
+-   beige
+
+-   blood
+
+-   dark
+
+-   league
+
+-   moon
+:::
+
+::: {.column width="50%"}
+
+-   night
+
+-   serif
+
+-   simple
+
+-   sky
+
+-   solarized
+:::
+:::
+
+Tema padrão:  **default**
+
+
+::: footer
+Fonte: [Documentação do Quarto](https://quarto.org/docs/presentations/revealjs/themes.html)
+:::
+
+## Vamos praticar! {.center}
+
+
+## Personalizando o estilo {auto-animate="true"}
+
+``` r
+---
+format:
+  revealjs: 
+    theme: moon
+---
+```
+
+## Personalizando o estilo {auto-animate="true"}
+
+
+``` r
+---
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+---
+```
+
+Crie um arquivo `custom.scss` para adicionar novas regras de estilo por lá.
+
+- Nesse arquivo teremos duas secões:
+
+  - `/*-- scss:defaults --*/` - [SASS variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables)
+  
+  - `/*-- scss:rules --*/` - regras em CSS
+  
+## Copie o código de exemplo a seguir:
+
+```scss
+/*-- scss:defaults --*/
+
+// importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&display=swap');
+
+// fonts
+$font-family-sans-serif: 'Lato', Tahoma, sans-serif !default;
+
+// headings
+$presentation-heading-font: 'Montserrat',  Tahoma, sans-serif  !default;
+$presentation-heading-color: #4c83b6 !default;
+
+
+$body-bg: #191919;
+$body-color: #fff;
+$link-color: #42affa;
+
+/*-- scss:rules --*/
+
+
+.slide-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 10px !important;
+  max-height: 15% !important;
+  height: 100% !important;
+  width: auto !important;
+  color: $body-color !important;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: unset !important;
+  color: $body-color !important;
+}
+
+
+```
+
+
+
+## Vamos praticar! {.center}
+
 
 # O que mais vocês desejam fazer nos slides?
 
@@ -273,6 +464,6 @@ TODO
 
 -   [Conteúdos sobre o Quarto na RStudio Conf 2022](https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/)
 
-- [Workshop Get Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/) 
+-   [Workshop Get Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
 
-- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto)
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto)
