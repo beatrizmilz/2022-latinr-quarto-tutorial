@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Comunicando seus resultados: Criando apresentações com Quarto
+
+Beatriz Milz
+
+Latin-R 2022 | Outubro 2022
+
+Slides: beatrizmilz.github.io/2022-latinr-quarto-tutorial
+
+
+## Materiais
+
+### Slides
+
+- **Slides**: <https://beatrizmilz.github.io/2022-latinr-quarto-tutorial/>
+  - Código dos slides: <https://github.com/beatrizmilz/2022-latinr-quarto-tutorial/blob/main/index.qmd> 
+  - Arquivo de estilo (`.scss`) dos slides: <https://github.com/beatrizmilz/2022-latinr-quarto-tutorial/blob/main/custom.scss>
+  
+### Atividade prática  
+
+- Slide criado na atividade prática: https://beatrizmilz.github.io/2022-latinr-quarto-tutorial/live-coding/index.html
+  
+- Arquivos gerados na atividade prática: <https://github.com/beatrizmilz/2022-latinr-quarto-tutorial/tree/main/live-coding>
+
