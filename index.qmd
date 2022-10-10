@@ -9,7 +9,7 @@ format:
     height: 900
     self-contained: false
     incremental: false
-    footer: "Slides by [Beatriz Milz](https://beamilz.com) (@BeaMilz), made with [Quarto](https://quarto.org/docs/presentations/revealjs/index.html)."
+    footer: "Slides by [Beatriz Milz](https://beamilz.com) (@BeaMilz), made with [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Code available [on GitHub](https://github.com/beatrizmilz/2022-latinr-quarto-tutorial)."
     theme: ["custom.scss"]
     slide-number: c/t
     show-slide-number: all
@@ -283,12 +283,12 @@ editor: visual
 
 -   Vamos disponibilizar nossa apresentação no QuartoPub: <https://quartopub.com/>
 
--   No terminal, usar o comando `quarto publish nome-do-arquivo.qmd` e seguir o passo a passo (no slide seguinte temos um exemplo).
+-   No terminal, usar o comando `quarto publish quarto-pub nome-do-arquivo.qmd` e seguir o passo a passo (no slide seguinte temos um exemplo).
 
 ##
 
 ``` bash
-/cloud/project$ quarto publish index.qmd
+/cloud/project$ quarto publish quarto-pub index.qmd
 ? Provider: › Quarto Pub
 ? Authorize (Y/n) › Yes
 Please authorize by opening this url: https://quartopub.com/authorize?id=......
