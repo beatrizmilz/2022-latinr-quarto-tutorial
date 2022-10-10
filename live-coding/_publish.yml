@@ -1,0 +1,4 @@
+- source: index.qmd
+  quarto-pub:
+    - id: 09474141-65b0-4d93-9a10-535c2f2de22d
+      url: 'https://quartopub.com/sites/beamilz/pinguins'

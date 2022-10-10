@@ -1,0 +1,83 @@
+---
+title: "Quarto Tutorial"
+subtitle: "Explorando a base de Pinguins"
+author: "Latin-R"
+date: "10/10/2022"
+lang: es
+# botón TAB
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    logo: "https://raw.githubusercontent.com/beatrizmilz/2022-latinr-quarto-tutorial/main/images/logo.png"
+editor: visual
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    fig.align: "center"
+bibliography: references.bib
+csl: abnt.csl
+# https://github.com/citation-style-language/styles
+---
+
+# Pinguins
+
+```{r pacotes}
+library(dados)
+library(dplyr)
+```
+
+[![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png){fig-align="center" width="50%"}](https://allisonhorst.github.io/palmerpenguins/)
+
+## A base dos Pinguins
+
+```{r texto}
+#| include: false
+# pinguins
+# dados::pinguins
+
+especies_pinguins <- pinguins %>% 
+  distinct(especie) %>% 
+  pull(especie) %>% 
+  knitr::combine_words(and = " e ", oxford_comma = FALSE)
+
+# pinguins$especie
+
+# pinguins %>% 
+  # .....
+#  pull(especie) # retorna como um vetor!
+
+
+```
+
+A base de dados pinguins apresenta dados de `r nrow(pinguins)` pinguins. As espécies representadas nesta base de dados são `r especies_pinguins`.
+
+## Massa média dos pinguins
+
+```{r tabela-massa}
+#| echo: false
+pinguins %>% 
+  group_by(especie) %>% 
+  summarise(media_massa = mean(massa_corporal, na.rm = TRUE)) %>% 
+  knitr::kable()
+```
+
+## Pacotes utilizados
+
+::: columns
+::: {.column width="50%"}
+![](https://allisonhorst.github.io/palmerpenguins/logo.png){alt="" width="100%"}
+:::
+
+::: {.column width="50%"}
+![](https://cienciadedatos.github.io/dados/reference/figures/dados-hex.png)
+:::
+:::
+
+## Obrigada!
+
+Fonte: @palmerpenguins
+
+Paquetes: dados [@dados], palmerpenguins [@palmerpenguins] e dplyr [@dplyr].
+
+## Referências

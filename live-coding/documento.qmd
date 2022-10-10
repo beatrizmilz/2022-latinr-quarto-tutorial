@@ -1,0 +1,56 @@
+---
+title: "Quarto Tutorial - Pinguins"
+author: "Latin-R"
+lang: es
+# botón TAB
+format: html
+editor: visual
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    fig.align: "center"
+bibliography: references.bib
+csl: abnt.csl
+# https://github.com/citation-style-language/styles
+---
+
+```{r pacotes}
+library(dados)
+library(dplyr)
+```
+
+[![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png){fig-align="center" width="50%"}](https://allisonhorst.github.io/palmerpenguins/)
+
+```{r texto}
+#| include: false
+# pinguins
+# dados::pinguins
+
+especies_pinguins <- pinguins %>% 
+  distinct(especie) %>% 
+  pull(especie) %>% 
+  knitr::combine_words(and = " e ", oxford_comma = FALSE)
+
+# pinguins$especie
+
+# pinguins %>% 
+  # .....
+#  pull(especie) # retorna como um vetor!
+
+
+```
+
+A base de dados pinguins apresenta dados de `r nrow(pinguins)` pinguins. As espécies representadas nesta base de dados são `r especies_pinguins`.
+
+```{r tabela-massa}
+#| echo: false
+pinguins %>% 
+  group_by(especie) %>% 
+  summarise(media_massa = mean(massa_corporal, na.rm = TRUE)) %>% 
+  knitr::kable()
+```
+
+Fonte: [@palmerpenguins]
+
+Paquetes: [@dados; @palmerpenguins; @dplyr]
