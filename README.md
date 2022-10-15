@@ -11,6 +11,11 @@ Slides: beatrizmilz.github.io/2022-latinr-quarto-tutorial
 
 ## Materiais
 
+### Video
+
+- [Gravação no Youtube](https://youtu.be/UmrB7aRmD2M)
+
+
 ### Slides
 
 -   **Slides**:
