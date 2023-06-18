@@ -7,10 +7,10 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.251">
+  <meta name="generator" content="quarto-1.0.36">
 
-  <meta name="author" content="Beatriz Milz">
-  <title>Comunicando seus resultados: Criando apresentações com Quarto</title>
+  <meta name="author" content="Haydée Svab">
+  <title>odbr package development</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -19,79 +19,10 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -388,451 +319,204 @@
     <div class="slides">
 
 <section class="center">
-  <h1 class="title">Comunicando seus resultados: Criando apresentações com <strong>Quarto</strong></h1>
-  <p class="author">Beatriz Milz</p>
-  <p class="date">Latin-R 2022 | Outubro 2022 <br><br> Slides: <strong>beatrizmilz.github.io/2022-latinr-quarto-tutorial</strong></p>
+  <h1 class="title"><strong>odbr</strong> package development</h1>
+  <p class="author">Haydée Svab</p>
+  <p class="date">rOpenSci Champions Program | 2023 June</p>
 </section>
 
 <section class="slide level2 center aboutmeslide">
-<h2>Beatriz Milz 🇧🇷</h2>
+<h2>Haydée Svab 🇧🇷</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
-<li><p>Contato</p>
+<li><p>Contact</p>
 <ul>
-<li><p>Twitter: <a href="https://twitter.com/BeaMilz">@BeaMilz</a></p></li>
-<li><p>Blog: <a href="https://beamilz.com">beamilz.com</a></p></li>
+<li><p>Linkedin: <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></p></li>
+<li><p>Twitter: <a href="https://twitter.com/hsvab">@hsvab</a></p></li>
 </ul></li>
-<li><p>Sobre mim</p>
+<li><p>About me</p>
 <ul>
-<li><p>Co-organizadora: R-Ladies São Paulo / Latin-R / satRday São Paulo</p></li>
-<li><p>Professora na <a href="https://curso-r.com/">Curso-R</a></p></li>
-<li><p>Instrutora de Tidyverse certificada pela RStudio</p></li>
+<li><p>Civil Engineer | MSc Transportation Eng. and Planning</p></li>
+<li><p>Data Scientist | Consultant | Researcher</p></li>
+<li><p>Urban Mobility | Smart Cities | Digital Government</p></li>
+<li><p>R-Ladies São Paulo chapter co-founder and co-organizer</p></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/octocat-1656339210373.png"></p>
+<p><img data-src="images/foto-linkedin.jpeg"></p>
 </div>
 </div>
 </section>
-<section class="title-slide slide level1 center">
-<h1>Tarefas iniciais</h1>
-<p>Caso não tenha, crie uma conta nos serviços:</p>
-<ul>
-<li><p>RStudio Cloud: <a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a></p></li>
-<li><p>QuartoPub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
-</ul>
-<p>Dica: Você pode criar uma conta vinculada ao Gmail ou GitHub.</p>
-</section>
-
-<section class="title-slide slide level1 center">
-<h1>Objetivos de aprendizagem</h1>
-<p>Responder as seguintes perguntas….</p>
-<p>⬜ O que é o Quarto?</p>
-<p>⬜ Como criar um documento simples ?</p>
-<p>⬜ Como criar uma apresentação?</p>
-<p>⬜ Como disponibilizar a apresentação online?</p>
-<p>⬜ Como alterar o estilo da apresentação?</p>
-</section>
-
 <section>
 <section class="title-slide slide level1 center">
-<h1>Sobre esse tutorial….</h1>
+<h1>odbr package</h1>
 
 </section>
 <section class="slide level2">
-<h2>Faremos muita prática!</h2>
-
-<img data-src="images/livecoding.jpg" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Tem novidades surgindo com frequência!</h2>
-
-<img data-src="images/something-new.jpg" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
-</div>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>O que é o Quarto?</h1>
-
-</section>
-<section class="slide level2">
-<h2>Seria o Quarto…</h2>
-<div class="r-stack">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/paste-614B8F2C.png" class="fragment"></p>
-</figure>
-</div>
-<p><img data-src="images/paste-23FE8FE7.png" class="fragment absolute" style="top: 15%; left: 40%; width: 400px; height: 400px; "></p>
-</div>
-</section>
-<section class="slide level2">
-<h2>O que é o Quarto?</h2>
-<ul>
-<li>O Quarto é um sistema de escrita técnica e científica, de código aberto.</li>
-</ul>
-
-<img data-src="images/quarto_schematic.png" data-out.width="50%" class="r-stretch quarto-figure-center"><p class="caption">A schematic representing the multi-language input (e.g.&nbsp;Python, R, Observable, Julia) and multi-format output (e.g.&nbsp;PDF, html, Word documents, and more) versatility of Quarto</p><div class="footer">
-<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a>.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Por que o Quarto existe?</h2>
-<ul>
-<li><p><strong>O Quarto é a nova geração do R Markdown!</strong></p></li>
-<li><p>O rmarkdown é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).</p></li>
-<li><p>O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, <strong>o seu uso acaba ficando limitado às pessoas que usam R</strong>.</p></li>
-<li><p><strong>O Quarto é um software novo, que não depende do R</strong>!</p></li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Quais são as similaridades?</h2>
-<ul>
-<li><p>A estrutura do arquivo é muito similar! Para muitos arquivos, há compatibilidade (bastando alterar a extensão de <code>.Rmd</code> para <code>.qmd</code>).</p></li>
-<li><p>Podemos adicionar código em R, Python, Julia, etc etc.</p></li>
-<li><p>Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos <code>.html</code>), PDFs, <code>.docx</code>, apresentações, documentos interativos, livros, e mais está sendo produzido :)</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Como começar a usar o quarto</h2>
-<p><a href="https://quarto.org/docs/get-started/">Instalar o Quarto:</a></p>
+<h2>Objective</h2>
 <p><br></p>
-<center>
-<a href="https://quarto.org/docs/get-started/"> <img data-src="images/install-quarto.png" style="width: 80%; !important" data-fig-align="center" alt="Print screen da página de instalação do Quarto"> </a>
-</center>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como criar um documento simples?</h1>
-
-</section>
-<section class="slide level2">
-<h2>Vamos usar o Quarto na RStudio Cloud!</h2>
-<ul>
-<li><p><a href="https://rstudio.cloud/content/4688214" class="uri">https://rstudio.cloud/content/4688214</a></p></li>
-<li><p>Similar ao RStudio IDE</p></li>
-<li><p>O quarto já vem instalado!</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Engines</h2>
-<ul>
-<li>Ao criar um novo arquivo com Quarto, podemos escolher entre duas <em>engines</em>: knitr ou jupyter.</li>
-</ul>
-<h3>Com knitr</h3>
-<p>Caso não tenha o pacote rmarkdown instalado, execute no console:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A Package that makes available data from Brazil’s orgin-destination (OD) surveys</p>
 <p><br></p>
-<h3>Com jupyter</h3>
-<p>Caso não tenha o jupyter instalado, execute no terminal:</p>
-<pre><code>python3 -m pip install jupyter</code></pre>
+<p><a href="https://github.com/hsvab/odbr">GitHub repository</a></p>
 </section>
 <section class="slide level2">
-<h2>Criar novo arquivo: New file</h2>
-<center>
-<img data-src="images/rstudio-newfile.png" style="width: 90%; !important" data-fig-align="center" alt="Print screen da IDE RStudio">
-</center>
-</section>
-<section class="slide level2">
-<h2>Renderizar o arquivo: Render file</h2>
-<center>
-<img data-src="images/rstudio-cloud-2.png" style="width: 90%; !important" data-fig-align="center" alt="Print screen da IDE RStudio Cloud">
-</center>
-</section>
-<section class="slide level2">
-<h2>Visual Editor</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
+<h2>Motivation</h2>
+<p><br></p>
 <ul>
-<li>As versões mais recentes do RStudio permitem usar o Visual Editor.</li>
-</ul>
-<p>Leitura indicada:</p>
-<ul>
-<li><a href="https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/">Exploring RStudio’s Visual Markdown Editor</a></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://www.rstudio.com/blog/rstudio-v1-4-preview-visual-markdown-editing/images/visual-editing.png" style="width:90.0%"></p>
-<p></p><figcaption>Fonte: RStudio</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como criar uma apresentação?</h1>
-
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href="#cb3-1"></a><span class="sc">---</span></span>
-<span id="cb3-2" class="hljs-ln-code"><a href="#cb3-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
-<span id="cb3-3" class="hljs-ln-code"><a href="#cb3-3"></a>format<span class="sc">:</span> html</span>
-<span id="cb3-4" class="hljs-ln-code"><a href="#cb3-4"></a>editor<span class="sc">:</span> visual</span>
-<span id="cb3-5" class="hljs-ln-code"><a href="#cb3-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href="#cb4-1"></a><span class="sc">---</span></span>
-<span id="cb4-2" class="hljs-ln-code"><a href="#cb4-2"></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
-<span id="cb4-3" class="hljs-ln-code"><a href="#cb4-3"></a>format<span class="sc">:</span> revealjs</span>
-<span id="cb4-4" class="hljs-ln-code"><a href="#cb4-4"></a>editor<span class="sc">:</span> visual</span>
-<span id="cb4-5" class="hljs-ln-code"><a href="#cb4-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><p>Os slides são separados considerando os títulos e subtítulos: <code>#</code> e <code>##</code>.</p></li>
-<li><p>Use <code>#</code> para criar uma nova seção.</p></li>
-<li><p>Use <code>##</code> para criar um novo slide.</p></li>
-</ul>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como compartilhar a apresentação?</h1>
-
-</section>
-<section class="slide level2">
-<h2>Algumas formas…</h2>
-<ul>
-<li><p>GitHub Pages</p></li>
-<li><p>Netlify</p></li>
-<li><p><strong>QuartoPub</strong></p></li>
+<li><p>My master’s thesis: <a href="https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php">Mobility pattern trends in the metropolitan area of São Paulo: the need of a gender perspective</a></p></li>
+<li><p>1977, 1987, 1997 and 2007 cohorts from São Paulo</p></li>
+<li><p>Wish to maximize the impact of my research and its results</p></li>
+<li><p>GitHub repositories: <a href="https://github.com/hsvab/mestrado-usp-ODs">databases</a> and <a href="https://github.com/hsvab/mestrado-usp-algoritmos">algorithms</a></p></li>
 </ul>
 </section>
 <section class="slide level2">
-<h2>Primeiros passos usando Quarto na linha de comando</h2>
+<h2>First Steps</h2>
+<p><br></p>
 <ul>
-<li><p>O Quarto é um CLI: Command Line Interface - Interface de linha de comando.</p></li>
-<li><p>Podemos usar o Quarto no terminal.</p></li>
+<li>Similar packages?</li>
 </ul>
 </section>
 <section class="slide level2">
-<h2></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">/cloud/project$</span> quarto help</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="ex">Usage:</span>   quarto </span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="ex">Version:</span> 1.1.251</span>
-<span id="cb5-5"><a href="#cb5-5"></a>                  </span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a>  <span class="ex">Description:</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a>    <span class="ex">Quarto</span> CLI</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  <span class="ex">Options:</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a>    <span class="ex">-h,</span> <span class="at">--help</span>     <span class="at">-</span> Show this help.                            </span>
-<span id="cb5-14"><a href="#cb5-14"></a>    <span class="ex">-V,</span> <span class="at">--version</span>  <span class="at">-</span> Show the version number for this program.  </span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a>  <span class="ex">Commands:</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a></span>
-<span id="cb5-18"><a href="#cb5-18"></a>    <span class="ex">render</span>          [input] [args...]   <span class="at">-</span> Render input file<span class="er">(</span><span class="ex">s</span><span class="kw">)</span> <span class="ex">to</span> various document types.            </span>
-<span id="cb5-19"><a href="#cb5-19"></a>    <span class="ex">preview</span>         [file] [args...]    <span class="at">-</span> Render and preview a document or website project.          </span>
-<span id="cb5-20"><a href="#cb5-20"></a>    <span class="ex">serve</span>           [input]             <span class="at">-</span> Serve a Shiny interactive document.                        </span>
-<span id="cb5-21"><a href="#cb5-21"></a>    <span class="ex">create-project</span>  [dir]               <span class="at">-</span> Create a project for rendering multiple documents          </span>
-<span id="cb5-22"><a href="#cb5-22"></a>    <span class="ex">convert</span>         <span class="op">&lt;</span>input<span class="op">&gt;</span>             - Convert documents to alternate representations.            </span>
-<span id="cb5-23"><a href="#cb5-23"></a>    <span class="ex">pandoc</span>          [args...]           <span class="at">-</span> Run the version of Pandoc embedded within Quarto.          </span>
-<span id="cb5-24"><a href="#cb5-24"></a>    <span class="ex">run</span>             [script] [args...]  <span class="at">-</span> Run a TypeScript, R, Python, or Lua script.                </span>
-<span id="cb5-25"><a href="#cb5-25"></a>    <span class="fu">install</span>         <span class="op">&lt;</span>type<span class="op">&gt;</span> [target]     <span class="at">-</span> Installs an extension or global dependency.                </span>
-<span id="cb5-26"><a href="#cb5-26"></a>    <span class="ex">publish</span>         [provider] [path]   <span class="at">-</span> Publish a document or project. Available providers include:</span>
-<span id="cb5-27"><a href="#cb5-27"></a>    <span class="ex">check</span>           [target]            <span class="at">-</span> Verify correct functioning of Quarto installation.         </span>
-<span id="cb5-28"><a href="#cb5-28"></a>    <span class="bu">help</span>            [command]           <span class="at">-</span> Show this help or the help of a sub-command.               </span>
-<span id="cb5-29"><a href="#cb5-29"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-<h2>QuartoPub</h2>
+<h2>First Steps</h2>
+<p><br></p>
 <ul>
-<li><p>Vamos disponibilizar nossa apresentação no QuartoPub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
-<li><p>No terminal, usar o comando <code>quarto publish quarto-pub nome-do-arquivo.qmd</code> e seguir o passo a passo (no slide seguinte temos um exemplo).</p></li>
+<li>Similar packages? <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">od</a></li>
 </ul>
 </section>
 <section class="slide level2">
-<h2></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">/cloud/project$</span> quarto publish quarto-pub index.qmd</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="ex">?</span> Provider: › Quarto Pub</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="ex">?</span> Authorize <span class="er">(</span><span class="ex">Y/n</span><span class="kw">)</span> <span class="ex">›</span> Yes</span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="ex">Please</span> authorize by opening this url: https://quartopub.com/authorize<span class="pp">?</span>id=......</span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="ex">?</span> Document name: › Use another name...</span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="ex">?</span> Publish with name: › nome-da-apresentacao</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="ex">[✓]</span> Creating quarto-pub document</span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="ex">[✓]</span> Preparing to publish document</span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="ex">[✓]</span> Uploading files <span class="er">(</span><span class="bu">complete</span><span class="kw">)</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="ex">[✓]</span> Deploying published document</span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="ex">[✓]</span> Published document: https://quartopub.com/sites/nome-usuario/nome-da-apresentacao</span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="ex">[✓]</span> Account site updated: https://nome-usuario.quarto.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como alterar o estilo da apresentação?</h1>
-
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Usando temas</h2>
+<h2>First Steps</h2>
+<p><br></p>
 <ul>
-<li>Existem alguns <a href="https://quarto.org/docs/presentations/revealjs/themes.html">temas</a> disponíveis para usar:</li>
-</ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a href="#cb7-1"></a><span class="sc">---</span></span>
-<span id="cb7-2" class="hljs-ln-code"><a href="#cb7-2"></a>format<span class="sc">:</span> revealjs</span>
-<span id="cb7-3" class="hljs-ln-code"><a href="#cb7-3"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Usando temas</h2>
-<ul>
-<li>Existem alguns <a href="https://quarto.org/docs/presentations/revealjs/themes.html">temas</a> disponíveis para usar:</li>
-</ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb8-1" class="hljs-ln-code"><a href="#cb8-1"></a><span class="sc">---</span></span>
-<span id="cb8-2" class="hljs-ln-code"><a href="#cb8-2"></a>format<span class="sc">:</span></span>
-<span id="cb8-3" class="hljs-ln-code"><a href="#cb8-3"></a>  revealjs<span class="sc">:</span> </span>
-<span id="cb8-4" class="hljs-ln-code"><a href="#cb8-4"></a>    theme<span class="sc">:</span> moon</span>
-<span id="cb8-5" class="hljs-ln-code"><a href="#cb8-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-<h2>Temas disponíveis</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>beige</p></li>
-<li><p>blood</p></li>
-<li><p>dark</p></li>
-<li><p>league</p></li>
-<li><p>moon</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><p>night</p></li>
-<li><p>serif</p></li>
-<li><p>simple</p></li>
-<li><p>sky</p></li>
-<li><p>solarized</p></li>
-</ul>
-</div>
-</div>
-<p>Tema padrão: <strong>default</strong></p>
-<div class="footer">
-<p>Fonte: <a href="https://quarto.org/docs/presentations/revealjs/themes.html">Documentação do Quarto</a></p>
-</div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Personalizando o estilo</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href="#cb9-1"></a><span class="sc">---</span></span>
-<span id="cb9-2" class="hljs-ln-code"><a href="#cb9-2"></a>format<span class="sc">:</span></span>
-<span id="cb9-3" class="hljs-ln-code"><a href="#cb9-3"></a>  revealjs<span class="sc">:</span> </span>
-<span id="cb9-4" class="hljs-ln-code"><a href="#cb9-4"></a>    theme<span class="sc">:</span> moon</span>
-<span id="cb9-5" class="hljs-ln-code"><a href="#cb9-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Personalizando o estilo</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb10-1" class="hljs-ln-code"><a href="#cb10-1"></a><span class="sc">---</span></span>
-<span id="cb10-2" class="hljs-ln-code"><a href="#cb10-2"></a>format<span class="sc">:</span></span>
-<span id="cb10-3" class="hljs-ln-code"><a href="#cb10-3"></a>  revealjs<span class="sc">:</span> </span>
-<span id="cb10-4" class="hljs-ln-code"><a href="#cb10-4"></a>    theme<span class="sc">:</span> [default, custom.scss]</span>
-<span id="cb10-5" class="hljs-ln-code"><a href="#cb10-5"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Crie um arquivo <code>custom.scss</code> para adicionar novas regras de estilo por lá.</p>
-<ul>
-<li><p>Nesse arquivo teremos duas secões:</p>
-<ul>
-<li><p><code>/*-- scss:defaults --*/</code> - <a href="https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables">SASS variables</a></p></li>
-<li><p><code>/*-- scss:rules --*/</code> - regras em CSS</p></li>
-</ul></li>
+<li><p>Similar packages? <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">od</a></p></li>
+<li><p>It is not a data package</p></li>
+<li><p>Functions for analysing OD surveys</p></li>
 </ul>
 </section>
 <section class="slide level2">
-<h2>Copie o código de exemplo a seguir:</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="co">// importing fonts</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Lato&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a></span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="co">// fonts</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a><span class="va">$font-family-sans-serif</span>: <span class="st">'Lato'</span><span class="op">,</span> Tahoma<span class="op">,</span> <span class="dv">sans-serif</span> <span class="at">!default</span><span class="op">;</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a></span>
-<span id="cb11-9"><a href="#cb11-9"></a><span class="co">// headings</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a><span class="va">$presentation-heading-font</span>: <span class="st">'Montserrat'</span><span class="op">,</span>  Tahoma<span class="op">,</span> <span class="dv">sans-serif</span>  <span class="at">!default</span><span class="op">;</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a><span class="va">$presentation-heading-color</span>: <span class="cn">#4c83b6</span> <span class="at">!default</span><span class="op">;</span></span>
-<span id="cb11-12"><a href="#cb11-12"></a></span>
-<span id="cb11-13"><a href="#cb11-13"></a></span>
-<span id="cb11-14"><a href="#cb11-14"></a><span class="va">$body-bg</span>: <span class="cn">#191919</span><span class="op">;</span></span>
-<span id="cb11-15"><a href="#cb11-15"></a><span class="va">$body-color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
-<span id="cb11-16"><a href="#cb11-16"></a><span class="va">$link-color</span>: <span class="cn">#42affa</span><span class="op">;</span></span>
-<span id="cb11-17"><a href="#cb11-17"></a></span>
-<span id="cb11-18"><a href="#cb11-18"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb11-19"><a href="#cb11-19"></a></span>
-<span id="cb11-20"><a href="#cb11-20"></a></span>
-<span id="cb11-21"><a href="#cb11-21"></a><span class="fu">.slide-logo</span> {</span>
-<span id="cb11-22"><a href="#cb11-22"></a>  <span class="kw">display</span>: <span class="dv">block</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-23"><a href="#cb11-23"></a>  <span class="kw">position</span>: <span class="dv">fixed</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-24"><a href="#cb11-24"></a>  <span class="kw">top</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-25"><a href="#cb11-25"></a>  <span class="kw">right</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-26"><a href="#cb11-26"></a>  <span class="kw">max-height</span>: <span class="dv">15</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-27"><a href="#cb11-27"></a>  <span class="kw">height</span>: <span class="dv">100</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-28"><a href="#cb11-28"></a>  <span class="kw">width</span>: <span class="bu">auto</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-29"><a href="#cb11-29"></a>  <span class="kw">color</span>: <span class="va">$body-color</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-30"><a href="#cb11-30"></a>}</span>
-<span id="cb11-31"><a href="#cb11-31"></a></span>
-<span id="cb11-32"><a href="#cb11-32"></a><span class="fu">.slide-number</span><span class="op">,</span> <span class="fu">.reveal.has-logo</span> <span class="fu">.slide-number</span> {</span>
-<span id="cb11-33"><a href="#cb11-33"></a>  <span class="kw">bottom</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-34"><a href="#cb11-34"></a>  <span class="kw">right</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-35"><a href="#cb11-35"></a>  <span class="kw">top</span>: <span class="bu">unset</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-36"><a href="#cb11-36"></a>  <span class="kw">color</span>: <span class="va">$body-color</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb11-37"><a href="#cb11-37"></a>}</span>
-<span id="cb11-38"><a href="#cb11-38"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>O que mais vocês desejam fazer nos slides?</h1>
-<p><a href="https://quarto.org/docs/presentations/revealjs/demo/index.html#/title-slide">Slide de exemplo</a> e <a href="https://quarto.org/docs/presentations/revealjs/">documentação</a></p>
+<h2>First Steps</h2>
+<p><br></p>
+<ul>
+<li>Inspirational packages?</li>
+</ul>
 </section>
 <section class="slide level2">
-<h2>Onde aprender mais…</h2>
+<h2>First Steps</h2>
+<p><br></p>
 <ul>
-<li><p><a href="https://quarto.org/docs/gallery/">Documentação do Quarto</a> e a <a href="https://quarto.org/docs/gallery">Galeria</a>.</p></li>
-<li><p><a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/">Não falamos do Quarto</a> <br>Post em inglês por <a href="https://www.apreshill.com/">Alison Hill</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=6p4vOKS6Xls&amp;t=67s">Reproducible Authoring with Quarto</a> <br> Apresentação em inglês por <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a></p></li>
-<li><p><a href="https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/">Conteúdos sobre o Quarto na RStudio Conf 2022</a></p></li>
-<li><p><a href="https://rstudio-conf-2022.github.io/get-started-quarto/">Workshop Get Started with Quarto</a></p></li>
-<li><p><a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a></p></li>
+<li>Inspirational packages? <a href="https://github.com/ipeaGIT/geobr/">geobr</a></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>First Steps</h2>
+<p><br></p>
+<ul>
+<li><p>Inspirational packages? <a href="https://github.com/ipeaGIT/geobr/">geobr</a></p></li>
+<li><p>It is a data package</p></li>
+<li><p>It is from Brazil</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>First Steps</h2>
+<p><br></p>
+<ul>
+<li><p>Inspirational packages? <a href="https://github.com/ipeaGIT/geobr/">geobr</a></p></li>
+<li><p>It is a data package</p></li>
+<li><p>It is from Brazil</p></li>
+<li><p>Talk to Rafael Pereira (May 11th)</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>First Steps</h2>
+<p><br></p>
+<ul>
+<li><p>Inspirational packages? <a href="https://github.com/ipeaGIT/geobr/">geobr</a></p></li>
+<li><p>It is a data package</p></li>
+<li><p>It is from Brazil</p></li>
+<li><p>Talk to Rafael Pereira (May 11th): what is his opinion about creating new monetary variables (such as family income) with all nominal values brought to the same date</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Strategic questions</h2>
+<p><br></p>
+<ul>
+<li><p>Will it be data only for São Paulo or for all of Brazil?</p></li>
+<li><p>Will it be only the databases in their original format? Or will there be some harmonization (between locations and/or years)?</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Strategic questions</h2>
+<p><br></p>
+<ul>
+<li>Will it be data only for São Paulo or for all of Brazil?</li>
+</ul>
+<p>The package will seek OD survey data from all Brazilian cities with this type of data, but this year, within the rOpenSci program, I will focus only on data from São Paulo.</p>
+<ul>
+<li>Will it be only the databases in their original format? Or will there be some harmonization (between locations and/or years)?</li>
+</ul>
+<p>I will make the databases available in their original format and with some harmonization between the years, for the same place.</p>
+</section>
+<section class="slide level2">
+<h2>Other valuable tips from the talk</h2>
+<ul>
+<li><p>failures and challenges that the geobr package faced, such as how to make large databases available: <a href="https://cran.r-project.org/web/packages/piggyback/index.html">piggyback</a></p></li>
+<li><p>gave another, simpler package to also have as reference: <a href="https://cran.r-project.org/web/packages/aopdata/index.html">aopdata</a></p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Main functions</h2>
+<p><br></p>
+<ul>
+<li><p>download_piggyback()</p></li>
+<li><p>read_od()</p></li>
+<li><p>read_dictionary()</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Main functions</h2>
+<p><br></p>
+<h3>download_piggyback()</h3>
+<ul>
+<li><p><strong>required parameter</strong>: the filename_to_download</p></li>
+<li><p><strong>description</strong>: download data from an existing release, used by read_od() and read_dictionary() functions</p></li>
+<li><p><strong>return</strong>: temporary_filename with the downloaded data</p></li>
+<li><p><strong>status</strong>: done!</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Main functions</h2>
+<p><br></p>
+<h3>read_od()</h3>
+<ul>
+<li><p><strong>required parameter</strong>: city, year and whether you want the harmonised database (over the years, for the same city) or not - the default is the raw base</p></li>
+<li><p><strong>description</strong>: after some argument checking it calls download_piggyback()</p></li>
+<li><p><strong>return</strong>: od_file with the requested data (if exists)</p></li>
+<li><p><strong>status</strong>: structure is done, need to improve the composition of the path with filename</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Main functions</h2>
+<p><br></p>
+<h3>read_dictionary()</h3>
+<ul>
+<li><p><strong>required parameter</strong>: city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base</p></li>
+<li><p><strong>description</strong>: after some argument checking it calls download_piggyback()</p></li>
+<li><p><strong>return</strong>: to be defined</p></li>
+<li><p><strong>status</strong>: to do</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Next steps raodmap</h2>
+<ul>
+<li><p><strong>June/2023</strong>: Make available 1977 dataset (raw) within a data dictionary (v.0.0.2) + rOpenSci Meeting</p></li>
+<li><p><strong>July/2023</strong>: Make available 1987, 1977, 2007 and 2017 dataset (raw) within a data dictionary for each (v.0.0.3)</p></li>
+<li><p><strong>August/2023</strong>: Make available 1977, 1987, 1977, 2007 and 2017 dataset (harmonized)(v.0.0.4)</p></li>
+<li><p><strong>September/2023</strong>: Make available 1977, 1987, 1977, 2007 and 2017 dictionaries (harmonized)(v.1.0.0 - pre relase) + rOpenSci Meeting</p></li>
+<li><p><strong>October/2023</strong>: Final reviews after feedbacks (v.1.0.0 - production)</p></li>
+<li><p><strong>November/2023</strong>: Docuemtnation + create a website for the package with pkgdown</p></li>
 </ul>
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p>Slides by <a href="https://beamilz.com">Beatriz Milz</a> (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>), made with <a href="https://quarto.org/docs/presentations/revealjs/index.html">Quarto</a>. Code available <a href="https://github.com/beatrizmilz/2022-latinr-quarto-tutorial">on GitHub</a>.</p>
+<p>Slides by <a href="https://www.linkedin.com/in/hsvab/">Haydée Svab</a> (<span class="citation" data-cites="hsvab">@hsvab</span>), made with <a href="https://quarto.org/docs/presentations/revealjs/index.html">Quarto</a>. Code available <a href="https://github.com/hsvab/2023-ropensci-champions-program">on GitHub</a>.</p>
 </div>
 </section></section>
     </div>
@@ -1046,48 +730,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1156,8 +798,7 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          let href = ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

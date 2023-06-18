@@ -1,7 +1,7 @@
 ---
-title: "Comunicando seus resultados: Criando apresentações com **Quarto**"
-author: "Beatriz Milz"
-date: "Latin-R 2022 | Outubro 2022   <br><br> Slides: **beatrizmilz.github.io/2022-latinr-quarto-tutorial** "
+title: "**odbr** package development"
+author: "Haydée Svab"
+date: "rOpenSci Champions Program | 2023 June"
 format: 
   revealjs:
     logo: "images/logo.png"
@@ -9,7 +9,7 @@ format:
     height: 900
     self-contained: false
     incremental: false
-    footer: "Slides by [Beatriz Milz](https://beamilz.com) (@BeaMilz), made with [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Code available [on GitHub](https://github.com/beatrizmilz/2022-latinr-quarto-tutorial)."
+    footer: "Slides by [Haydée Svab](https://www.linkedin.com/in/hsvab/) (@hsvab), made with [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Code available [on GitHub](https://github.com/hsvab/2023-ropensci-champions-program)."
     theme: ["custom.scss"]
     slide-number: c/t
     show-slide-number: all
@@ -17,453 +17,223 @@ format:
     preview-links: false
 ---
 
-## Beatriz Milz 🇧🇷 {.center .aboutmeslide}
+## Haydée Svab 🇧🇷 {.center .aboutmeslide}
 
 ::: columns
 ::: {.column width="60%"}
--   Contato
+-   Contact
 
-    -   Twitter: [\@BeaMilz](https://twitter.com/BeaMilz)
+    -   Linkedin: [Haydee Svab](https://www.linkedin.com/in/hsvab/)
+  
+    -   Twitter: [\@hsvab](https://twitter.com/hsvab)
 
-    -   Blog: [beamilz.com](https://beamilz.com)
+-   About me
 
--   Sobre mim
+    -   Civil Engineer | MSc Transportation Eng. and Planning
+    
+    -   Data Scientist | Consultant | Researcher
 
-    -   Co-organizadora: R-Ladies São Paulo / Latin-R / satRday São Paulo
-
-    -   Professora na [Curso-R](https://curso-r.com/)
-
-    -   Instrutora de Tidyverse certificada pela RStudio
+    -   Urban Mobility  | Smart Cities | Digital Government
+    
+    -   R-Ladies São Paulo chapter co-founder and co-organizer
 :::
 
 ::: {.column width="40%"}
-![](images/octocat-1656339210373.png)
+![](images/foto-linkedin.jpeg)
 :::
 :::
 
-# Tarefas iniciais
+# odbr package
 
-Caso não tenha, crie uma conta nos serviços:
+## Objective
 
-- RStudio Cloud: <https://rstudio.cloud/>
+<br> 
 
-- QuartoPub: <https://quartopub.com/>
+A Package that makes available data from Brazil's orgin-destination (OD) surveys
 
+<br> 
 
-Dica: Você pode criar uma conta vinculada ao Gmail ou GitHub.
-
-
-# Objetivos de aprendizagem
-
-Responder as seguintes perguntas....
-
-⬜ O que é o Quarto?
-
-⬜ Como criar um documento simples ?
-
-⬜ Como criar uma apresentação?
-
-⬜ Como disponibilizar a apresentação online?
-
-⬜ Como alterar o estilo da apresentação?
-
-# Sobre esse tutorial....
-
-## Faremos muita prática!
-
-![](images/livecoding.jpg){fig-align="center"}
-
-::: footer
-Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
-:::
-
-## Tem novidades surgindo com frequência!
-
-![](images/something-new.jpg){fig-align="center"}
-
-::: footer
-Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
-:::
-
-# O que é o Quarto?
-
-## Seria o Quarto...
-
-::: r-stack
-![](images/paste-614B8F2C.png){.fragment fig-align="center"}
-
-![](images/paste-23FE8FE7.png){.fragment .absolute top="15%" left="40%" width="400" height="400"}
-:::
-
-## O que é o Quarto?
-
--   O Quarto é um sistema de escrita técnica e científica, de código aberto.
-
-![A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto](images/quarto_schematic.png){fig-align="center" out.width="50%"}
-
-::: footer
-Arte por [Allison Horst](https://mobile.twitter.com/allison_horst).
-:::
+[GitHub repository](https://github.com/hsvab/odbr)
 
 
-## Por que o Quarto existe?
 
--   **O Quarto é a nova geração do R Markdown!**
-
--   O rmarkdown é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).
-
--   O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, **o seu uso acaba ficando limitado às pessoas que usam R**.
-
--   **O Quarto é um software novo, que não depende do R**!
-
-::: notes
--   Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.
-:::
-
-## Quais são as similaridades?
-
--   A estrutura do arquivo é muito similar! Para muitos arquivos, há compatibilidade (bastando alterar a extensão de `.Rmd` para `.qmd`).
-
--   Podemos adicionar código em R, Python, Julia, etc etc.
-
--   Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos `.html`), PDFs, `.docx`, apresentações, documentos interativos, livros, e mais está sendo produzido :)
-
-## Como começar a usar o quarto
-
-[Instalar o Quarto:](https://quarto.org/docs/get-started/)
+## Motivation
 
 <br>
 
-<center><a href='https://quarto.org/docs/get-started/'> ![](images/install-quarto.png){style="width: 80%; !important" fig-alt="Print screen da página de instalação do Quarto" fig-align="center"} </a></center>
+- My master's thesis: [Mobility pattern trends in the metropolitan area of São Paulo: the need of a gender perspective](https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php)
 
-# Como criar um documento simples?
+- 1977, 1987, 1997 and 2007 cohorts from São Paulo
 
-## Vamos usar o Quarto na RStudio Cloud!
 
--   <https://rstudio.cloud/content/4688214>
+- Wish to maximize the impact of my research and its results
 
--   Similar ao RStudio IDE
 
--   O quarto já vem instalado!
-
-## Engines 
-
-- Ao criar um novo arquivo com Quarto, podemos escolher entre duas *engines*: knitr ou jupyter.
+- GitHub repositories: [databases](https://github.com/hsvab/mestrado-usp-ODs) and [algorithms](https://github.com/hsvab/mestrado-usp-algoritmos)
 
 
 
-### Com knitr
+## First Steps
 
-Caso não tenha o pacote rmarkdown instalado, execute no console:
-
-``` r
-install.packages("rmarkdown")
-```
 <br>
 
-### Com jupyter
+- Similar packages?
 
-Caso não tenha o jupyter instalado, execute no terminal:
 
-```
-python3 -m pip install jupyter
-```
+## First Steps
 
-## Criar novo arquivo: New file
+<br>
 
-<center>![](images/rstudio-newfile.png){style="width: 90%; !important" fig-alt="Print screen da IDE RStudio" fig-align="center"}</center>
+- Similar packages? [od](https://cran.r-project.org/web/packages/od/vignettes/od.html)
 
-## Renderizar o arquivo: Render file
 
-<center>![](images/rstudio-cloud-2.png){style="width: 90%; !important" fig-alt="Print screen da IDE RStudio Cloud" fig-align="center"}</center>
+## First Steps
 
-## Visual Editor
+<br>
 
-::: columns
-::: {.column width="45%"}
--   As versões mais recentes do RStudio permitem usar o Visual Editor.
+- Similar packages? [od](https://cran.r-project.org/web/packages/od/vignettes/od.html)
 
-Leitura indicada:
+- It is not a data package
 
--   [Exploring RStudio's Visual Markdown Editor](https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/)
-:::
+- Functions for analysing OD surveys
 
-::: {.column width="50%"}
-```{r, echo=FALSE, out.width="90%", fig.align='center', fig.cap="Fonte: RStudio"}
-knitr::include_graphics("https://www.rstudio.com/blog/rstudio-v1-4-preview-visual-markdown-editing/images/visual-editing.png")
-```
-:::
-:::
+## First Steps
 
-## Vamos praticar! {.center}
+<br>
 
-# Como criar uma apresentação?
+- Inspirational packages?
 
-## Altere o cabeçalho do arquivo {auto-animate="true"}
+## First Steps
 
-``` r
----
-title: "Título"
-format: html
-editor: visual
----
-```
+<br>
 
-## Altere o cabeçalho do arquivo {auto-animate="true"}
+- Inspirational packages? [geobr](https://github.com/ipeaGIT/geobr/)
 
-``` r
----
-title: "Título"
-format: revealjs
-editor: visual
----
-```
+## First Steps
 
--   Os slides são separados considerando os títulos e subtítulos: `#` e `##`.
+<br>
 
-- Use  `#` para criar uma nova seção.
+- Inspirational packages? [geobr](https://github.com/ipeaGIT/geobr/)
 
-- Use `##` para criar um novo slide.
+- It is a data package
 
+- It is from Brazil
 
-## Vamos praticar! {.center}
+## First Steps
 
-# Como compartilhar a apresentação?
+<br>
 
-## Algumas formas...
+- Inspirational packages? [geobr](https://github.com/ipeaGIT/geobr/)
 
--   GitHub Pages
+- It is a data package
 
--   Netlify
+- It is from Brazil
 
--   **QuartoPub**
+- Talk to Rafael Pereira (May 11th)
 
-## Primeiros passos usando Quarto na linha de comando
+## First Steps
 
--   O Quarto é um CLI: Command Line Interface - Interface de linha de comando.
+<br>
 
--   Podemos usar o Quarto no terminal.
+- Inspirational packages? [geobr](https://github.com/ipeaGIT/geobr/)
 
-## 
+- It is a data package
 
-``` bash
-/cloud/project$ quarto help
+- It is from Brazil
 
-  Usage:   quarto 
-  Version: 1.1.251
-                  
+- Talk to Rafael Pereira (May 11th): what is his opinion about creating new monetary variables (such as family income) with all nominal values brought to the same date
 
-  Description:
+## Strategic questions
 
-    Quarto CLI
+<br>
 
-  Options:
+- Will it be data only for São Paulo or for all of Brazil?
 
-    -h, --help     - Show this help.                            
-    -V, --version  - Show the version number for this program.  
+- Will it be only the databases in their original format? Or will there be some harmonization (between locations and/or years)?
 
-  Commands:
+## Strategic questions
 
-    render          [input] [args...]   - Render input file(s) to various document types.            
-    preview         [file] [args...]    - Render and preview a document or website project.          
-    serve           [input]             - Serve a Shiny interactive document.                        
-    create-project  [dir]               - Create a project for rendering multiple documents          
-    convert         <input>             - Convert documents to alternate representations.            
-    pandoc          [args...]           - Run the version of Pandoc embedded within Quarto.          
-    run             [script] [args...]  - Run a TypeScript, R, Python, or Lua script.                
-    install         <type> [target]     - Installs an extension or global dependency.                
-    publish         [provider] [path]   - Publish a document or project. Available providers include:
-    check           [target]            - Verify correct functioning of Quarto installation.         
-    help            [command]           - Show this help or the help of a sub-command.               
+<br>
 
+- Will it be data only for São Paulo or for all of Brazil?
 
-```
+The package will seek OD survey data from all Brazilian cities with this type of data, but this year, within the rOpenSci program, I will focus only on data from São Paulo.
 
-## QuartoPub
 
--   Vamos disponibilizar nossa apresentação no QuartoPub: <https://quartopub.com/>
+- Will it be only the databases in their original format? Or will there be some harmonization (between locations and/or years)?
 
--   No terminal, usar o comando `quarto publish quarto-pub nome-do-arquivo.qmd` e seguir o passo a passo (no slide seguinte temos um exemplo).
+I will make the databases available in their original format and with some harmonization between the years, for the same place.
 
-##
 
-``` bash
-/cloud/project$ quarto publish quarto-pub index.qmd
-? Provider: › Quarto Pub
-? Authorize (Y/n) › Yes
-Please authorize by opening this url: https://quartopub.com/authorize?id=......
-? Document name: › Use another name...
-? Publish with name: › nome-da-apresentacao
+## Other valuable tips from the talk
 
-[✓] Creating quarto-pub document
-[✓] Preparing to publish document
-[✓] Uploading files (complete)
-[✓] Deploying published document
-[✓] Published document: https://quartopub.com/sites/nome-usuario/nome-da-apresentacao
-[✓] Account site updated: https://nome-usuario.quarto.pub
-```
+- failures and challenges that the geobr package faced, such as how to make large databases available: [piggyback](https://cran.r-project.org/web/packages/piggyback/index.html)
 
+- gave another, simpler package to also have as reference: [aopdata](https://cran.r-project.org/web/packages/aopdata/index.html)
 
-## Vamos praticar! {.center}
 
-# Como alterar o estilo da apresentação?
+## Main functions
 
-## Usando temas {auto-animate="true"}
+<br>
 
--   Existem alguns [temas](https://quarto.org/docs/presentations/revealjs/themes.html) disponíveis para usar:
+- download_piggyback() 
 
-``` r
----
-format: revealjs
----
-```
+- read_od()
 
-## Usando temas {auto-animate="true"}
+- read_dictionary()
 
--   Existem alguns [temas](https://quarto.org/docs/presentations/revealjs/themes.html) disponíveis para usar:
 
-``` r
----
-format:
-  revealjs: 
-    theme: moon
----
-```
+## Main functions
 
-## Temas disponíveis
+<br>
 
+### download_piggyback()
 
+- **required parameter**: the filename_to_download
 
-::: columns
-::: {.column width="50%"}
+- **description**: download data from an existing release, used by read_od() and read_dictionary() functions
 
--   beige
+- **return**: temporary_filename with the downloaded data
 
--   blood
+- **status**: done!
 
--   dark
 
--   league
+## Main functions
 
--   moon
-:::
+<br>
 
-::: {.column width="50%"}
+### read_od()
 
--   night
+- **required parameter**: city, year and whether you want the harmonised database (over the years, for the same city) or not - the default is the raw base
 
--   serif
+- **description**: after some argument checking it calls download_piggyback()
 
--   simple
+- **return**: od_file with the requested data (if exists)
 
--   sky
+- **status**: structure is done, need to improve the composition of the path with filename
 
--   solarized
-:::
-:::
 
-Tema padrão:  **default**
+## Main functions
 
+<br>
 
-::: footer
-Fonte: [Documentação do Quarto](https://quarto.org/docs/presentations/revealjs/themes.html)
-:::
+### read_dictionary()
 
-## Vamos praticar! {.center}
+- **required parameter**: city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
 
+- **description**: after some argument checking it calls download_piggyback()
 
-## Personalizando o estilo {auto-animate="true"}
+- **return**: to be defined
 
-``` r
----
-format:
-  revealjs: 
-    theme: moon
----
-```
+- **status**: to do
 
-## Personalizando o estilo {auto-animate="true"}
 
+## Next steps raodmap
 
-``` r
----
-format:
-  revealjs: 
-    theme: [default, custom.scss]
----
-```
+- **June/2023**: Make available 1977 dataset (raw) within a data dictionary (v.0.0.2) + rOpenSci Meeting
 
-Crie um arquivo `custom.scss` para adicionar novas regras de estilo por lá.
-
-- Nesse arquivo teremos duas secões:
-
-  - `/*-- scss:defaults --*/` - [SASS variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables)
-  
-  - `/*-- scss:rules --*/` - regras em CSS
-  
-## Copie o código de exemplo a seguir:
-
-```scss
-/*-- scss:defaults --*/
-
-// importing fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&display=swap');
-
-// fonts
-$font-family-sans-serif: 'Lato', Tahoma, sans-serif !default;
-
-// headings
-$presentation-heading-font: 'Montserrat',  Tahoma, sans-serif  !default;
-$presentation-heading-color: #4c83b6 !default;
-
-
-$body-bg: #191919;
-$body-color: #fff;
-$link-color: #42affa;
-
-/*-- scss:rules --*/
-
-
-.slide-logo {
-  display: block !important;
-  position: fixed !important;
-  top: 0 !important;
-  right: 10px !important;
-  max-height: 15% !important;
-  height: 100% !important;
-  width: auto !important;
-  color: $body-color !important;
-}
-
-.slide-number, .reveal.has-logo .slide-number {
-  bottom: 10px !important;
-  right: 10px !important;
-  top: unset !important;
-  color: $body-color !important;
-}
-
-
-```
-
-
-
-## Vamos praticar! {.center}
-
-
-# O que mais vocês desejam fazer nos slides?
-
-[Slide de exemplo](https://quarto.org/docs/presentations/revealjs/demo/index.html#/title-slide) e [documentação](https://quarto.org/docs/presentations/revealjs/)
-
-## Onde aprender mais...
-
--   [Documentação do Quarto](https://quarto.org/docs/gallery/) e a [Galeria](https://quarto.org/docs/gallery).
-
--   [Não falamos do Quarto](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/) <br>Post em inglês por [Alison Hill](https://www.apreshill.com/)
-
--   [Reproducible Authoring with Quarto](https://www.youtube.com/watch?v=6p4vOKS6Xls&t=67s) <br> Apresentação em inglês por [Mine Çetinkaya-Rundel](https://mine-cr.com/)
-
--   [Conteúdos sobre o Quarto na RStudio Conf 2022](https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/)
-
--   [Workshop Get Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
-
--   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto)
+- **July/2023**: Make available 1987, 1977, 2007 and 2017 dataset (raw) within a data dictionary for each (v.0.0.3)
+- **August/2023**: Make available 1977, 1987, 1977, 2007 and 2017 dataset (harmonized)(v.0.0.4)
+- **September/2023**: Make available 1977, 1987, 1977, 2007 and 2017 dictionaries (harmonized)(v.1.0.0 - pre relase) + rOpenSci Meeting
+- **October/2023**: Final reviews after feedbacks (v.1.0.0 - production)
+- **November/2023**: Docuemtnation + create a website for the package with pkgdown
