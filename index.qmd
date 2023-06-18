@@ -172,18 +172,18 @@ I will make the databases available in their original format and with some harmo
 - gave another, simpler package to also have as reference: [aopdata](https://cran.r-project.org/web/packages/aopdata/index.html)
 
 
-## Main functions
+## Main functions on `odbr`
 
 <br>
 
-- download_piggyback() 
+- [download_piggyback()](https://github.com/hsvab/odbr/blob/main/R/download.R)
 
-- read_od()
+- [read_od()](https://github.com/hsvab/odbr/blob/main/R/read_od.R)
 
 - read_dictionary()
 
 
-## Main functions
+## Main functions on `odbr`
 
 <br>
 
@@ -228,7 +228,7 @@ I will make the databases available in their original format and with some harmo
 - **status**: to do
 
 
-## Next steps raodmap
+## Next steps roadmap
 
 - **June/2023**: Make available 1977 dataset (raw) within a data dictionary (v.0.0.2) + rOpenSci Meeting
 
@@ -236,4 +236,4 @@ I will make the databases available in their original format and with some harmo
 - **August/2023**: Make available 1977, 1987, 1977, 2007 and 2017 dataset (harmonized)(v.0.0.4)
 - **September/2023**: Make available 1977, 1987, 1977, 2007 and 2017 dictionaries (harmonized)(v.1.0.0 - pre relase) + rOpenSci Meeting
 - **October/2023**: Final reviews after feedbacks (v.1.0.0 - production)
-- **November/2023**: Docuemtnation + create a website for the package with pkgdown
+- **November/2023**: Documentation + create a website for the package with pkgdown
