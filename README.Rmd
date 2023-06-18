@@ -11,26 +11,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Comunicando seus resultados: Criando apresentações com Quarto
+# **odbr** package development
 
-Beatriz Milz
+Haydée Svab
 
-Latin-R 2022 | Outubro 2022
-
-Slides: beatrizmilz.github.io/2022-latinr-quarto-tutorial
+rOpenSci Champions Program | 2023 June
 
 
-## Materiais
+## Objective
 
-### Slides
+Share the development stage of the **odbr** package, which makes available data from Brazil's orgin-destination (OD) surveys.
 
-- **Slides**: <https://beatrizmilz.github.io/2022-latinr-quarto-tutorial/>
-  - Código dos slides: <https://github.com/beatrizmilz/2022-latinr-quarto-tutorial/blob/main/index.qmd> 
-  - Arquivo de estilo (`.scss`) dos slides: <https://github.com/beatrizmilz/2022-latinr-quarto-tutorial/blob/main/custom.scss>
-  
-### Atividade prática  
+[GitHub repository](https://github.com/hsvab/odbr)
 
-- Slide criado na atividade prática: https://beatrizmilz.github.io/2022-latinr-quarto-tutorial/live-coding/index.html
-  
-- Arquivos gerados na atividade prática: <https://github.com/beatrizmilz/2022-latinr-quarto-tutorial/tree/main/live-coding>
 
+## References
+
+- My master's thesis: [Mobility pattern trends in the metropolitan area of São Paulo: the need of a gender perspective](https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php)
+
+- GitHub repositories: [databases](https://github.com/hsvab/mestrado-usp-ODs) and [algorithms](https://github.com/hsvab/mestrado-usp-algoritmos)
