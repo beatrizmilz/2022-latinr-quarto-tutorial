@@ -189,7 +189,7 @@ I will make the databases available in their original format and with some harmo
 
 ### download_piggyback()
 
-- **required parameter**: the filename_to_download
+- **required parameters**: the filename_to_download
 
 - **description**: download data from an existing release, used by read_od() and read_dictionary() functions
 
@@ -204,7 +204,7 @@ I will make the databases available in their original format and with some harmo
 
 ### read_od()
 
-- **required parameter**: city, year and whether you want the harmonised database (over the years, for the same city) or not - the default is the raw base
+- **required parameters**: city, year and whether you want the harmonised database (over the years, for the same city) or not - the default is the raw base
 
 - **description**: after some argument checking it calls download_piggyback()
 
@@ -219,7 +219,7 @@ I will make the databases available in their original format and with some harmo
 
 ### read_dictionary()
 
-- **required parameter**: city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
+- **required parameters**: city, year and whether you want the harmonized database (over the years, for the same city) or not - the default is the raw base
 
 - **description**: after some argument checking it calls download_piggyback()
 
